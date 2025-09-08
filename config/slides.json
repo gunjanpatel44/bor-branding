@@ -1,0 +1,42 @@
+[
+  {
+    "imageUrl": "/artistic/artistic-1.png",
+    "alt": "Abstract glitch art with Blckorack logo",
+    "title": "Digital Decay",
+    "subtitle": "Where technology frays, true style emerges.",
+    "ctaText": "View The Aesthetic",
+    "ctaLink": "/collections/digital-decay"
+  },
+  {
+    "imageUrl": "/artistic/artistic-2.jpg",
+    "alt": "Textured design with cracked stone effect",
+    "title": "Stone & Silence",
+    "subtitle": "Strength carved from pressure. Inspired by the beauty of resilience.",
+    "ctaText": "Explore The Texture",
+    "ctaLink": "/collections/stone-series"
+  },
+  {
+    "imageUrl": "/artistic/artistic-3.jpg",
+    "alt": "Minimalist streetwear graphic",
+    "title": "Code of the Streets",
+    "subtitle": "Minimalism as a statement. Uncoded, unapologetic, and essential.",
+    "ctaText": "Shop Minimal",
+    "ctaLink": "/shop/minimalist"
+  },
+  {
+    "imageUrl": "/artistic/artistic-4.jpg",
+    "alt": "Dark, moody abstract design",
+    "title": "Into The Void",
+    "subtitle": "Embrace the unknown. A collection born from darkness and shadow.",
+    "ctaText": "Discover The Dark",
+    "ctaLink": "/collections/void"
+  },
+  {
+    "imageUrl": "/artistic/artistic-5.jpg",
+    "alt": "Energetic digital distortion art",
+    "title": "Static Shock",
+    "subtitle": "Disrupt the pattern. Wear the noise. A tribute to chaotic energy.",
+    "ctaText": "Feel The Energy",
+    "ctaLink": "/shop/static-shock"
+  }
+]
