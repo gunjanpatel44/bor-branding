@@ -268,14 +268,3 @@ body {
 .bg-nostalgia-gradient {
   background: linear-gradient(135deg, var(--color-nostalgia-200), var(--color-nostalgia-500));
 }
-
-/* Swiper styles */
-
-.swiper-pagination-bullet {
-  background-color: var(--color-brand-50);
-  opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: var(--color-brand-900);
-}

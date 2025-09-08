@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
-import ArtisticImage from '@/public/artistic/artistic.png'
+import ArtisticImage1 from '@/public/artistic/artistic-1.png'
 import ABOUT_US from '@/config/about.json'
 import { BiShield, BiSolidZap, BiUser } from 'react-icons/bi'
 import { TbUserSquare } from 'react-icons/tb'
@@ -28,7 +28,7 @@ const AboutUsPage = () => {
       <section className="relative h-[10vh] min-h-[350px] md:h-[40vh] flex items-center justify-center">
         {/* Background Image */}
         <Image
-          src={ArtisticImage}
+          src={ArtisticImage1}
           alt="Abstract branding image for Blckorack"
           fill
           className="object-cover opacity-30"

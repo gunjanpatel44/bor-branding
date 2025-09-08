@@ -25,7 +25,7 @@ const Header = () => {
             <p className="font-times text-2xl hidden sm:flex">BLCKORACK</p>
           </Link>
           {/* Mobile Cart Icon */}
-          <Link className="flex sm:hidden items-center gap-2" href="/">
+          <Link className="flex sm:hidden items-center gap-2 text-2xl" href="/">
             <BiCart />
           </Link>
           {/* Desktop Nav */}
@@ -36,9 +36,12 @@ const Header = () => {
             <Link href="/about-us" className="transition-colors">
               About us
             </Link>
+            <Link href="/about-us" className="transition-colors">
+              Login
+            </Link>
           </nav>
           {/* Desktop Cart */}
-          <Link className="hidden sm:flex items-center gap-2" href="/">
+          <Link className="hidden sm:flex items-center gap-2 text-2xl" href="/">
             <BiCart />
           </Link>
         </div>
@@ -57,15 +60,22 @@ const Header = () => {
         </button>
         {/* Sidebar Menu */}
         <div className="flex flex-col mt-16 space-y-6 px-6">
-          <Link href="/" onClick={() => setIsOpen(false)} className="text-brand font-medium">
+          <Link href="/" onClick={() => setIsOpen(false)} className="text-dark-900 font-medium">
             Home
           </Link>
           <Link
             href="/about-us"
             onClick={() => setIsOpen(false)}
-            className="text-brand font-medium"
+            className="text-brand-900 font-medium"
           >
             About us
+          </Link>
+          <Link
+            href="/login"
+            onClick={() => setIsOpen(false)}
+            className="text-dark-900 font-medium"
+          >
+            Login
           </Link>
         </div>
       </div>
