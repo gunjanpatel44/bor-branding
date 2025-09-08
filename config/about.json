@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "title": "Our Story | Blckorack",
+    "description": "Blckorack is more than clothing—it’s armor. Born from cracks, darkness, and resilience, we turn flaws into design. For the outsiders, the misfits, and the underestimated.",
+    "keywords": "streetwear, premium t-shirts, Blckorack, resilience, authenticity, urban fashion, designer apparel"
+  },
+  "hero": {
+    "title": "Blckorack",
+    "subtitle": "Embrace the cracks"
+  },
+  "story": {
+    "title": "Our Story",
+    "paragraphs": [
+      "In a world obsessed with clarity, perfection, and predictability, Blckorack was born from the opposite—darkness, cracks, and the unknown. The name itself reflects our identity:",
+      "“Blck” stands for rawness, minimalism, and rebellion, stripping away the excess to leave only what is essential.",
+      "“Orack” symbolizes a fractured rock—tough, imperfect, yet unbreakable, embodying resilience, scars, and the beauty found in damage.",
+      "At Blckorack, we don’t celebrate perfection—we celebrate survival, growth, and authenticity. Every cut, every imperfection, every misstep is not a weakness but a reminder that you’ve endured, adapted, and are still standing. Life will break you, but we believe those cracks can be turned into design.",
+      "We create clothing that speaks to real stories, raw emotions, and unapologetic style. Fashion, to us, isn’t about conforming to rules—it’s about rebellion, self-expression, and making it your own.",
+      "Blckorack is for the outsiders, the dreamers, and the misfits—for those who never fit the mold, who’ve been doubted, overlooked, or underestimated but continue to push forward. Every piece we design is more than clothing—it’s armor, built not to hide who you are but to amplify it.",
+      "Because the world doesn’t need more “perfect” figures—it needs people bold enough to embrace their cracks and call them beautiful."
+    ]
+  },
+  "values": [
+    {
+      "title": "Resilience",
+      "desc": "Life will break you, but you can turn the cracks into design.",
+      "icon": "Shield"
+    },
+    {
+      "title": "Authenticity",
+      "desc": "No fake perfection. Just real stories, raw emotions, and unapologetic style.",
+      "icon": "User"
+    },
+    {
+      "title": "Rebellion",
+      "desc": "Fashion shouldn’t dictate who you are. You dictate what fashion becomes.",
+      "icon": "Zap"
+    },
+    {
+      "title": "Tribe",
+      "desc": "For outsiders, dreamers, and misfits who turn flaws into beauty.",
+      "icon": "Users"
+    }
+  ],
+  "contact": {
+    "title": "Join The Tribe",
+    "desc": "With every purchase, we dedicate 5% to charity, because true strength isn’t just about fighting your own battles—it’s about helping others fight theirs too.",
+    "ctaText": "Shop The Collection",
+    "ctaLink": "/shop"
+  }
+}
