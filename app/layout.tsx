@@ -5,11 +5,13 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { StarryBackground } from '@/components/StarryBackground'
+import COMPANY from '@/config/company.json'
 
-import './globals.css'
 import TopBar from '@/components/Topbar'
-import { ConfigProvider } from 'antd'
 import theme from '@/utils/theme'
+import { ConfigProvider, FloatButton } from 'antd'
+import { AiOutlineWhatsApp } from 'react-icons/ai'
+import './globals.css'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -40,8 +42,21 @@ export default function RootLayout({
         <div className="relative z-10">
           <AntdRegistry>
             <ConfigProvider theme={theme}>
-              <TopBar />
-              <Header />
+              <div className="sticky top-0 z-50">
+                <TopBar />
+                <Header />
+              </div>
+              <FloatButton
+                style={{
+                  insetInlineEnd: 32,
+                  insetBlockEnd: 32,
+                  height: 56,
+                  width: 56,
+                }}
+                type="primary"
+                icon={<AiOutlineWhatsApp />}
+                href={COMPANY.whatsappLink}
+              />
               {children}
               <Footer />
             </ConfigProvider>

@@ -1,14 +1,16 @@
 'use client'
+
 import company from '@/config/company.json'
+import Marquee from 'react-fast-marquee'
 
 const TopBar = () => {
   if (!company.announcement) return null
 
   return (
-    <div className="w-full inset-0 bg-gradient-to-r from-success-200 to-success-500 text-center text-gray-700 overflow-hidden">
-      <div className="whitespace-nowrap animate-marquee py-2 text-sm font-medium">
-        {company.announcement}
-      </div>
+    <div className="relative w-full overflow-hidden bg-gradient-to-r from-gray-900 via-gray-800 to-black shadow-md">
+      <Marquee gradient={false} speed={300} loop={0} pauseOnHover={true}>
+        <p className="text-gray-200 font-sans p-1">{company.announcement}</p>
+      </Marquee>
     </div>
   )
 }

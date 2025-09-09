@@ -1,13 +1,23 @@
-import POLICY_DATA from '@/config/returnPolicy.json'
 import COMPANY from '@/config/company.json'
+import POLICY_DATA from '@/config/returnPolicy.json'
+import ArtisticImage1 from '@/public/artistic/artistic-1.png'
+import Image from 'next/image'
 
 const ReturnPolicyPage = () => {
   return (
     <main className="bg-black text-white">
       {/* Hero Section */}
-      <section className="bg-gray-950 py-16 md:py-20 border-b border-gray-800">
-        <div className="container mx-auto px-6 md:px-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold uppercase tracking-widest text-gray-100">
+      <section className="relative h-[10vh] min-h-[350px] md:h-[40vh] flex items-center justify-center">
+        <Image
+          src={ArtisticImage1}
+          alt="Abstract branding image for Blckorack"
+          fill
+          className="object-cover opacity-30"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black" />
+        <div className="relative text-center px-4 z-10">
+          <h1 className="text-xl md:text-2xl lg:text-4xl font-extrabold uppercase tracking-widest mb-4 animate-fade-in-down">
             {POLICY_DATA.hero.title}
           </h1>
         </div>

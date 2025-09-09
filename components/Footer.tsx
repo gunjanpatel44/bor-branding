@@ -18,12 +18,14 @@ export default function Footer() {
       <footer className="bg-brand text-gray-900 px-5 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Info */}
-          <div className="space-y-4">
-            <Link className="flex items-center gap-2 text-2xl" href="/">
-              <Image src={Logo} alt={company.name} className="size-16" />
-              <p className="font-times uppercase">{company.name}</p>
+          <div className="flex h-fit items-center gap-2">
+            <Link href="/">
+              <Image src={Logo} alt={company.name} className="size-14" />
             </Link>
-            <p className="text-sm italic">{company.tagLine}</p>
+            <div className="flex flex-col items-center">
+              <p className="font-times uppercase text-2xl">{company.name}</p>
+              <p className="text-sm italic">{company.tagLine}</p>
+            </div>
           </div>
           {/* Quick Links */}
           <div className=" flex flex-col space-y-4">
@@ -34,6 +36,9 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/about-us">About Us</Link>
+              </li>
+              <li>
+                <Link href="/return-policy">Return Policy</Link>
               </li>
             </ul>
           </div>
