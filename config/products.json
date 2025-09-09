@@ -5,42 +5,58 @@
       "name": "Nature Growth Tee",
       "description": "Forest green with growth symbolism",
       "imageUrl": "/t-shirts/image-tshirt-1.jpg",
-      "theme": "nature"
+      "theme": "nature",
+      "mrp": 2999,
+      "sellingPrice": 2199
     },
     {
       "id": "prod_02",
       "name": "Mythology Tee",
       "description": "Bold red with epic storytelling",
       "imageUrl": "/t-shirts/image-tshirt-2.jpg",
-      "theme": "mythology"
+      "theme": "mythology",
+      "mrp": 2999,
+      "sellingPrice": 2199,
+      "ribbonText": "Brand new",
+      "ribbonColor": "red"
     },
     {
       "id": "prod_03",
       "name": "Nostalgia Tee",
       "description": "Washed black with childhood memories",
       "imageUrl": "/t-shirts/image-tshirt-3.jpg",
-      "theme": "nostalgia"
+      "theme": "nostalgia",
+      "mrp": 2999,
+      "sellingPrice": 2199,
+      "ribbonText": "Top rated",
+      "ribbonColor": "purple"
     },
     {
       "id": "prod_04",
       "name": "Urban Decay Tee",
       "description": "Concrete grey with abstract design",
       "imageUrl": "/t-shirts/image-tshirt-4.jpg",
-      "theme": "nature"
+      "theme": "nature",
+      "mrp": 2999,
+      "sellingPrice": 2199
     },
     {
       "id": "prod_05",
       "name": "Cosmic Glitch Tee",
       "description": "Deep indigo with distorted graphics",
       "imageUrl": "/t-shirts/image-tshirt-5.jpg",
-      "theme": "nostalgia"
+      "theme": "nostalgia",
+      "mrp": 2999,
+      "sellingPrice": 2199
     },
     {
       "id": "prod_06",
       "name": "Ancient Runes Tee",
       "description": "Sandstone with forgotten symbols",
       "imageUrl": "/t-shirts/image-tshirt-6.jpg",
-      "theme": "mythology"
+      "theme": "mythology",
+      "mrp": 2999,
+      "sellingPrice": 2199
     }
   ]
 }

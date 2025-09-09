@@ -24,6 +24,7 @@ const theme: ThemeConfig = {
     },
     FloatButton: {
       fontSizeIcon: 24,
+      colorPrimary: 'var(--color-whatsapp)',
     },
     Form: {
       labelColor: 'var(--color-gray-800)',
