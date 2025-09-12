@@ -5,6 +5,10 @@
   --color-foreground: #ffffff;
   --color-transparent: #00000000;
   --color-whatsapp: #25d366;
+  --color-youtube: #ff0000;
+  --color-instagram: #e1306c;
+  --color-mail: #d44638;
+  --color-phone: #4285f4;
 
   /* Brand Colors */
   --color-brand: #f6f6f6;
@@ -24,6 +28,11 @@
   --color-foreground: var(--color-foreground);
   --color-transparent: #00000000;
   --color-whatsapp: #25d366;
+  --color-youtube: #ff0000;
+  --color-instagram: #e1306c;
+  --color-twitter: #000000;
+  --color-mail: #d44638;
+  --color-phone: #4285f4;
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
