@@ -73,17 +73,17 @@ const Header = () => {
           <ul className="flex justify-center gap-8 text-3xl text-gray-700">
             <li>
               <Link href={COMPANY.instagramLink} target="_blank">
-                <AiFillInstagram className="hover:text-pink-500 transition-colors" />
+                <AiFillInstagram className="hover:text-instagram transition-colors" />
               </Link>
             </li>
             <li>
-              <Link href={COMPANY.whatsappLink} target="_blank">
-                <AiOutlineWhatsApp className="hover:text-green-500 transition-colors" />
+              <Link href={COMPANY.whatsappLink} target="_blank" rel="noopener noreferrer">
+                <AiOutlineWhatsApp className="hover:text-whatsapp transition-colors" />
               </Link>
             </li>
             <li>
               <Link href={COMPANY.youtubeLink} target="_blank">
-                <AiFillYoutube className="hover:text-red-500 transition-colors" />
+                <AiFillYoutube className="hover:text-youtube transition-colors" />
               </Link>
             </li>
           </ul>

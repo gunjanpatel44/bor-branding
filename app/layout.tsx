@@ -54,6 +54,7 @@ export default function RootLayout({
                   width: 56,
                 }}
                 type="primary"
+                target="_blank"
                 icon={<AiOutlineWhatsApp />}
                 href={COMPANY.whatsappLink}
               />

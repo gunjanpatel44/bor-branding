@@ -15,7 +15,7 @@ const HeroCarousel = () => {
       align: 'center',
       duration: 40,
     },
-    [Autoplay({ delay: 2000, stopOnInteraction: false })]
+    [Autoplay({ delay: 3000, stopOnInteraction: false })]
   )
 
   const [selectedIndex, setSelectedIndex] = useState(0)
