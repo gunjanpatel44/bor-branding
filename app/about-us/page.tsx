@@ -77,20 +77,26 @@ const AboutUsPage = () => {
         </div>
       </section>
       {/* Core Values Section */}
-      <section className="bg-gray-900 py-20 md:py-24">
+      <section className="bg-background py-20 md:py-24 overflow-hidden">
         <div className="container mx-auto px-6 md:px-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 uppercase tracking-wider">
-            Our Core Values
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-16 uppercase tracking-widest text-gray-200">
+            {ABOUT_US.values.title}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            {ABOUT_US.values.map((item) => (
+            {ABOUT_US.values.items.map((item, index) => (
               <div
                 key={item.title}
-                className="p-8 rounded-lg bg-black border border-gray-800 transform hover:scale-105 hover:border-white transition-all duration-300 cursor-pointer"
+                className={`p-1 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg transform transition-all duration-500 ease-in-out hover:!rotate-0 hover:scale-105 group ${
+                  index % 2 === 0 ? 'rotate-[-2deg]' : 'rotate-[2deg]'
+                }`}
               >
-                {iconMap[item.icon]}
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-400 font-light">{item.desc}</p>
+                <div className="bg-black rounded-md h-full p-8 flex flex-col items-center">
+                  <div className="text-white transition-colors duration-300 group-hover:text-amber-300">
+                    {iconMap[item.icon]}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-100 mb-2">{item.title}</h3>
+                  <p className="text-gray-400 font-light text-sm">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
