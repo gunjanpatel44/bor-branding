@@ -9,43 +9,49 @@
     "subtitle": "Embrace the cracks"
   },
   "story": {
-    "title": "Our Story",
+    "title": "- The Story",
     "paragraphs": [
-      "In a world obsessed with clarity, perfection, and predictability, Blckorack was born from the opposite—darkness, cracks, and the unknown. The name itself reflects our identity:",
-      "“Blck” stands for rawness, minimalism, and rebellion, stripping away the excess to leave only what is essential.",
-      "“Orack” symbolizes a fractured rock—tough, imperfect, yet unbreakable, embodying resilience, scars, and the beauty found in damage.",
-      "At Blckorack, we don’t celebrate perfection—we celebrate survival, growth, and authenticity. Every cut, every imperfection, every misstep is not a weakness but a reminder that you’ve endured, adapted, and are still standing. Life will break you, but we believe those cracks can be turned into design.",
-      "We create clothing that speaks to real stories, raw emotions, and unapologetic style. Fashion, to us, isn’t about conforming to rules—it’s about rebellion, self-expression, and making it your own.",
-      "Blckorack is for the outsiders, the dreamers, and the misfits—for those who never fit the mold, who’ve been doubted, overlooked, or underestimated but continue to push forward. Every piece we design is more than clothing—it’s armor, built not to hide who you are but to amplify it.",
-      "Because the world doesn’t need more “perfect” figures—it needs people bold enough to embrace their cracks and call them beautiful."
+      "In a world obsessed with clarity and perfection, Blckorack was born from the opposite—darkness, cracks, and the unknown.",
+      "The name itself is a fusion: “Blck” for the raw, minimalist rebellion that strips away excess, leaving only what is essential. “Orack” for the fractured rock—tough, imperfect, yet unbreakable.",
+      "Blckorack isn’t about being polished. It’s about wearing your cracks like armor. Every imperfection is proof that you’ve survived, that you’ve grown, that you’re still here."
     ]
   },
-  "values": [
-    {
-      "title": "Resilience",
-      "desc": "Life will break you, but you can turn the cracks into design.",
-      "icon": "Shield"
-    },
-    {
-      "title": "Authenticity",
-      "desc": "No fake perfection. Just real stories, raw emotions, and unapologetic style.",
-      "icon": "User"
-    },
-    {
-      "title": "Rebellion",
-      "desc": "Fashion shouldn’t dictate who you are. You dictate what fashion becomes.",
-      "icon": "Zap"
-    },
-    {
-      "title": "Tribe",
-      "desc": "For outsiders, dreamers, and misfits who turn flaws into beauty.",
-      "icon": "Users"
-    }
-  ],
+  "manifesto": {
+    "title": "This Is Not For Everyone",
+    "paragraphs": [
+      "This is for the ones who found strength in the silence. For those who were told they were 'too much' or 'not enough'.",
+      "Blckorack is a rejection of the polished, predictable world. It's an armor forged in failure, a flag for the resilient. We don't sell clothes. We offer an identity for those who have walked through fire and refused to burn."
+    ]
+  },
+  "values": {
+    "title": "The Blckorack Code",
+    "items": [
+      {
+        "title": "Embrace The Flaw",
+        "desc": "Your scars are a map of survival. We turn cracks into design, honoring the strength it took to earn them.",
+        "icon": "Shield"
+      },
+      {
+        "title": "Unapologetic Truth",
+        "desc": "Forget perfection. We celebrate raw emotion, real stories, and the unfiltered truth of who you are.",
+        "icon": "User"
+      },
+      {
+        "title": "Silent Rebellion",
+        "desc": "Don’t follow trends—become one. This is a quiet statement against the ordinary, a defiance worn, not shouted.",
+        "icon": "Zap"
+      },
+      {
+        "title": "Find Your Tribe",
+        "desc": "For the outsiders, the dreamers, and the underestimated. We are the collective that finds beauty in the breaks.",
+        "icon": "Users"
+      }
+    ]
+  },
   "contact": {
-    "title": "Join The Tribe",
-    "desc": "With every purchase, we dedicate 5% to charity, because true strength isn’t just about fighting your own battles—it’s about helping others fight theirs too.",
-    "ctaText": "Shop The Collection",
+    "title": "Join the Tribe",
+    "desc": "Every purchase fuels change. 5% goes to charity—because true strength isn’t just about surviving your own battles, it’s about helping others fight theirs.",
+    "ctaText": "Shop Now",
     "ctaLink": "/shop"
   }
 }
