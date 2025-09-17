@@ -4,13 +4,31 @@ import COMPANY from '@/config/company.json'
 import Logo from '@/public/logo/bor-logo.png'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AiFillInstagram, AiFillYoutube, AiOutlineWhatsApp } from 'react-icons/ai'
 import { BiCart, BiMenu } from 'react-icons/bi'
 import { CgClose } from 'react-icons/cg'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('overflow-hidden')
+      document.body.style.position = 'fixed'
+      document.body.style.width = '100%'
+    } else {
+      document.body.classList.remove('overflow-hidden')
+      document.body.style.position = ''
+      document.body.style.width = ''
+    }
+    return () => {
+      document.body.classList.remove('overflow-hidden')
+      document.body.style.position = ''
+      document.body.style.width = ''
+    }
+  }, [isOpen])
 
   return (
     <header className="bg-brand text-brand-900 border-b sticky top-0 z-50">
