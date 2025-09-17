@@ -35,6 +35,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen bg-[#0a0a0a] text-white overflow-x-hidden`}
       >

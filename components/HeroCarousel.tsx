@@ -45,17 +45,13 @@ const HeroCarousel = () => {
               key={index}
             >
               <div
-                className={`relative w-full h-[80vh] md:h-[65vh] rounded-2xl transition-all duration-700 ease-out ${
+                className={`relative w-full h-[80vh] md:h-[65vh] transition-all duration-700 ease-out ${
                   index === selectedIndex ? 'scale-100 opacity-100' : 'scale-95 opacity-60'
                 }`}
               >
-                <img
-                  src={slide.imageUrl}
-                  alt={slide.alt}
-                  className="w-full h-full object-cover rounded-2xl"
-                />
+                <img src={slide.imageUrl} alt={slide.alt} className="w-full h-full object-cover" />
                 <div
-                  className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-end text-center text-white p-8 rounded-2xl transition-opacity duration-500 ${
+                  className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-end text-center text-white p-8 transition-opacity duration-500 ${
                     index === selectedIndex ? 'opacity-100' : 'opacity-0'
                   }`}
                 >
