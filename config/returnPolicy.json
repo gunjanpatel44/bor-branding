@@ -8,32 +8,36 @@
     "title": "Return & Exchange Policy"
   },
   "policy": {
-    "lastUpdated": "September 8, 2025",
-    "introduction": "Your satisfaction is our priority. If you're not completely satisfied with your purchase, we're here to help. Please read our return policy carefully to ensure a smooth process.",
+    "lastUpdated": "September 20, 2025",
+    "introduction": "At Blckorack, we value your trust and strive to provide you with the best shopping experience. If for any reason you are not fully satisfied with your purchase, you can return the product under the following terms and conditions:",
     "sections": [
       {
-        "title": "7-Day Return Window",
-        "content": "You have 7 calendar days from the date you receive your item to initiate a return. To be eligible, your item must be unused, unwashed, and in the same condition that you received it, with all original tags attached."
+        "title": "Return Booking",
+        "content": "Returns must be booked within 24 hours of delivery. To initiate a return, please DM us on Instagram at @blckorack.in."
       },
       {
-        "title": "How to Initiate a Return",
-        "content": "To start a return, please email our support team at blckorack@gmail.com with your order number and the reason for the return. We will provide you with instructions on how to send back your item. Please do not send your purchase back to us without first requesting a return."
+        "title": "Return Pickup",
+        "content": "Once your return is booked, a delivery partner will pick up the order within 48 hours from your address."
+      },
+      {
+        "title": "Return Charges",
+        "content": "A return charge of ₹150 will be applicable. This charge will be deducted from your refund amount."
+      },
+      {
+        "title": "Quality Check & Processing",
+        "content": "Once the returned product reaches our warehouse, it will undergo a Quality Check (QC) process. After successful QC approval, your refund will be processed."
       },
       {
         "title": "Refunds",
         "content": "Once we receive and inspect your returned item, we will notify you of the approval or rejection of your refund. If approved, your refund will be processed, and a credit will automatically be applied to your original method of payment within 7-10 business days."
       },
       {
-        "title": "Exchanges",
-        "content": "We only replace items if they are defective or damaged. If you need to exchange it for the same item, send us an email at blckorack@gmail.com. Due to the limited nature of our drops, we cannot guarantee that the item will be in stock for an exchange."
+        "title": "Timelines",
+        "content": "The complete return and refund process usually takes 6–7 working days from the date of pickup."
       },
       {
-        "title": "Shipping Costs",
-        "content": "You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are non-refundable. If you receive a refund, the cost of return shipping may be deducted from your refund."
-      },
-      {
-        "title": "Damaged or Incorrect Items",
-        "content": "If you received a damaged or incorrect item, please contact us immediately at blckorack@gmail.com with your order number and a photo of the item's condition. We will address these issues on a case-by-case basis to ensure your satisfaction."
+        "title": "Important Note",
+        "content": "Products must be returned in their original condition with tags and packaging intact. Returns that fail QC will not be eligible for a refund."
       }
     ]
   }

@@ -6,7 +6,7 @@ export default function NotFound() {
       <div className="max-w-4xl mx-auto">
         {/* T-shirt Mockup Section */}
         <div className="mb-12">
-          <div className="w-64 h-64 md:w-80 md:h-80 mx-auto bg-dark-800 rounded-lg flex items-center justify-center border border-gray-800 shadow-2xl shadow-gray-900/50 relative overflow-hidden">
+          <div className="w-64 h-64 md:w-80 md:h-80 mx-auto bg-brand-900-800 rounded-lg flex items-center justify-center border border-gray-800 shadow-2xl shadow-gray-900/50 relative overflow-hidden">
             <span className="text-8xl md:text-9xl font-black text-gray-700 font-mono tracking-wider animate-pulse">
               404
             </span>

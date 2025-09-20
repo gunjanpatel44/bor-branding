@@ -96,7 +96,7 @@ export default function Footer() {
         </div>
       </footer>
       {/* Copyright */}
-      <div className="bg-dark-900 text-gray-300 text-sm text-center p-2 border-t border-gray-800">
+      <div className="bg-brand-900 text-gray-300 text-sm text-center p-2 border-t border-gray-800">
         <p>
           &copy; {currentYear} {company.name}. All rights reserved.
         </p>

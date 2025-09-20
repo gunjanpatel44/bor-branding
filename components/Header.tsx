@@ -95,8 +95,8 @@ const Header = () => {
               <Link href="/about-us" className="hover:text-gray-400 transition-colors">
                 About
               </Link>
-              <Link href="/shop" className="hover:text-gray-400 transition-colors">
-                Shop
+              <Link href="/return-policy" className="hover:text-gray-400 transition-colors">
+                Return Policy
               </Link>
             </nav>
             {/* Cart */}
@@ -119,15 +119,15 @@ const Header = () => {
       >
         <div className="flex flex-col justify-between h-full">
           {/* Menu Links */}
-          <div className="flex flex-col justify-center items-center flex-1 text-2xl space-y-8 font-semibold">
+          <div className="flex flex-col justify-center items-center flex-1 text-2xl space-y-8">
             <Link href="/" onClick={() => setIsOpen(false)}>
               Home
             </Link>
             <Link href="/about-us" onClick={() => setIsOpen(false)}>
               About
             </Link>
-            <Link href="/shop" onClick={() => setIsOpen(false)}>
-              Shop
+            <Link href="/return-policy" onClick={() => setIsOpen(false)}>
+              Return Policy
             </Link>
           </div>
           {/* Social Links */}
