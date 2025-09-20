@@ -24,7 +24,7 @@ const ReturnPolicyPage = () => {
       </section>
       {/* Policy Details Section */}
       <section className="py-16 md:py-20">
-        <div className="container mx-auto px-6 md:px-10 max-w-3xl">
+        <div className="mx-auto px-6 md:px-10 max-w-3xl">
           <p className="text-center text-gray-500 mb-10 italic">
             Last updated: {POLICY_DATA.policy.lastUpdated}
           </p>

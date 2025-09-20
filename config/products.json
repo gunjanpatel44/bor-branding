@@ -1,62 +1,162 @@
 {
   "products": [
     {
-      "id": "prod_01",
+      "id": 1,
       "name": "Nature Growth Tee",
-      "description": "Forest green with growth symbolism",
-      "imageUrl": "/t-shirts/image-tshirt-1.jpg",
-      "theme": "nature",
-      "mrp": 2999,
-      "sellingPrice": 2199
-    },
-    {
-      "id": "prod_02",
-      "name": "Mythology Tee",
-      "description": "Bold red with epic storytelling",
-      "imageUrl": "/t-shirts/image-tshirt-2.jpg",
-      "theme": "mythology",
+      "slug": "nature-growth-tee",
+      "description": "Forest green with growth symbolism, crafted for the resilient.",
+      "longDescription": "Forged from the earth's own resilience, the Nature Growth Tee is an armor of 240 GSM heavyweight cotton. Its garment-dyed, forest green fabric tells a story of survival, with a screen-printed graphic that finds beauty in the cracks. This isn't just clothing; it's a declaration that you've endured, adapted, and grown stronger. Made for a relaxed, oversized fit that’s as unapologetic as you are.",
       "mrp": 2999,
       "sellingPrice": 2199,
+      "theme": "nature",
+      "imageUrl": "/t-shirts/image-tshirt-1.jpg",
+      "gallery": [
+        "/t-shirts/image-tshirt-2.jpg",
+        "/t-shirts/image-tshirt-3.jpg",
+        "/t-shirts/image-tshirt-4.jpg",
+        "/t-shirts/image-tshirt-5.jpg",
+        "/t-shirts/image-tshirt-6.jpg"
+      ],
+      "details": [
+        "240 GSM Heavyweight 100% Cotton",
+        "Garment-Dyed for a Vintage Feel",
+        "Relaxed, Oversized Fit",
+        "High-Density Screen Print"
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"],
       "ribbonText": "Brand new",
       "ribbonColor": "red"
     },
     {
-      "id": "prod_03",
-      "name": "Nostalgia Tee",
-      "description": "Washed black with childhood memories",
-      "imageUrl": "/t-shirts/image-tshirt-3.jpg",
-      "theme": "nostalgia",
+      "id": 2,
+      "name": "Mythology Ramayana Tee",
+      "slug": "mythology-ramayana-tee",
+      "description": "Bold red with epic storytelling, a tribute to timeless legends.",
+      "longDescription": "The Ramayana Tee is a canvas for epic tales, printed on a bold, blood-red fabric. It captures the spirit of rebellion and righteousness, designed for those who write their own myths. This piece is a conversation starter, a symbol of your own legendary journey, crafted with the same premium quality and relaxed fit that defines Blckorack.",
       "mrp": 2999,
       "sellingPrice": 2199,
+      "theme": "mythology",
+      "imageUrl": "/t-shirts/image-tshirt-2.jpg",
+      "gallery": [
+        "/t-shirts/image-tshirt-1.jpg",
+        "/t-shirts/image-tshirt-3.jpg",
+        "/t-shirts/image-tshirt-4.jpg",
+        "/t-shirts/image-tshirt-5.jpg",
+        "/t-shirts/image-tshirt-6.jpg"
+      ],
+      "details": [
+        "240 GSM Heavyweight 100% Cotton",
+        "Reactive-Dyed for Lasting Color",
+        "Relaxed, Oversized Fit",
+        "Multi-Layer Graphic Print"
+      ],
+      "sizes": ["S", "M", "L", "XL"],
       "ribbonText": "Top rated",
       "ribbonColor": "purple"
     },
     {
-      "id": "prod_04",
-      "name": "Urban Decay Tee",
-      "description": "Concrete grey with abstract design",
-      "imageUrl": "/t-shirts/image-tshirt-4.jpg",
-      "theme": "nature",
+      "id": 3,
+      "name": "Nostalgia Glitch Tee",
+      "slug": "nostalgia-glitch-tee",
+      "description": "Faded black with memories of a distorted past.",
+      "longDescription": "The Nostalgia Glitch Tee is a tribute to the imperfect, fragmented memories that shape us. A faded black base serves as the backdrop for a glitched graphic, representing the beautiful chaos of looking back. It's a wearable piece of art that’s both comfortable and thought-provoking, designed for those who find strength in their personal history.",
       "mrp": 2999,
-      "sellingPrice": 2199
-    },
-    {
-      "id": "prod_05",
-      "name": "Cosmic Glitch Tee",
-      "description": "Deep indigo with distorted graphics",
-      "imageUrl": "/t-shirts/image-tshirt-5.jpg",
+      "sellingPrice": 2199,
       "theme": "nostalgia",
-      "mrp": 2999,
-      "sellingPrice": 2199
+      "imageUrl": "/t-shirts/image-tshirt-3.jpg",
+      "gallery": [
+        "/t-shirts/image-tshirt-1.jpg",
+        "/t-shirts/image-tshirt-2.jpg",
+        "/t-shirts/image-tshirt-4.jpg",
+        "/t-shirts/image-tshirt-5.jpg",
+        "/t-shirts/image-tshirt-6.jpg"
+      ],
+      "details": [
+        "220 GSM Midweight 100% Cotton",
+        "Acid-Washed for a Worn-in Look",
+        "True-to-Size Boxy Fit",
+        "Distressed Digital Print"
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
     },
     {
-      "id": "prod_06",
-      "name": "Ancient Runes Tee",
-      "description": "Sandstone with forgotten symbols",
-      "imageUrl": "/t-shirts/image-tshirt-6.jpg",
+      "id": 4,
+      "name": "Nature Dawn Hoodie",
+      "slug": "nature-dawn-hoodie",
+      "description": "Earthy tones that rise with the morning sun.",
+      "longDescription": "The Nature Dawn Hoodie blends warmth with symbolism. Made from 300 GSM brushed fleece, it features sun-rise inspired gradient tones. A heavyweight piece that reminds you of new beginnings every time you wear it. Designed for a cozy oversized fit.",
+      "mrp": 4499,
+      "sellingPrice": 3499,
+      "theme": "nature",
+      "imageUrl": "/t-shirts/image-tshirt-4.jpg",
+      "gallery": [
+        "/t-shirts/image-tshirt-1.jpg",
+        "/t-shirts/image-tshirt-2.jpg",
+        "/t-shirts/image-tshirt-3.jpg",
+        "/t-shirts/image-tshirt-5.jpg",
+        "/t-shirts/image-tshirt-6.jpg"
+      ],
+      "details": [
+        "300 GSM Brushed Fleece",
+        "Gradient Dyed Finish",
+        "Oversized Drop Shoulder Fit",
+        "Kangaroo Pocket"
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "ribbonText": "Limited drop",
+      "ribbonColor": "green"
+    },
+    {
+      "id": 5,
+      "name": "Mythology Krishna Tee",
+      "slug": "mythology-krishna-tee",
+      "description": "Divine blue inspired by tales of Krishna.",
+      "longDescription": "The Krishna Tee is dyed in divine blue shades, reflecting stories of compassion and playfulness. Featuring intricate line art prints, this piece blends cultural roots with modern streetwear energy. Perfect for those who embody charisma and courage.",
+      "mrp": 3199,
+      "sellingPrice": 2399,
       "theme": "mythology",
-      "mrp": 2999,
-      "sellingPrice": 2199
+      "imageUrl": "/t-shirts/image-tshirt-5.jpg",
+      "gallery": [
+        "/t-shirts/image-tshirt-1.jpg",
+        "/t-shirts/image-tshirt-2.jpg",
+        "/t-shirts/image-tshirt-3.jpg",
+        "/t-shirts/image-tshirt-4.jpg",
+        "/t-shirts/image-tshirt-6.jpg"
+      ],
+      "details": [
+        "240 GSM Heavyweight Cotton",
+        "Pigment Dyed Blue",
+        "Relaxed Oversized Fit",
+        "Fine Line Art Print"
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "ribbonText": "Best seller",
+      "ribbonColor": "blue"
+    },
+    {
+      "id": 6,
+      "name": "Nostalgia VHS Tee",
+      "slug": "nostalgia-vhs-tee",
+      "description": "Retro graphics inspired by VHS tapes and old-school memories.",
+      "longDescription": "The VHS Tee takes you back to the static-filled days of cassettes and rewind buttons. Printed on a washed charcoal base, the cracked graphic channels vintage energy. Built with a boxy fit and midweight cotton, it's your wearable time capsule.",
+      "mrp": 2899,
+      "sellingPrice": 2099,
+      "theme": "nostalgia",
+      "imageUrl": "/t-shirts/image-tshirt-6.jpg",
+      "gallery": [
+        "/t-shirts/image-tshirt-1.jpg",
+        "/t-shirts/image-tshirt-2.jpg",
+        "/t-shirts/image-tshirt-3.jpg",
+        "/t-shirts/image-tshirt-4.jpg",
+        "/t-shirts/image-tshirt-5.jpg"
+      ],
+      "details": [
+        "220 GSM Midweight Cotton",
+        "Vintage Washed Finish",
+        "Boxy Fit",
+        "Retro Screen Print"
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
     }
   ]
 }

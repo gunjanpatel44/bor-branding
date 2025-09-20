@@ -58,7 +58,7 @@ const Header = () => {
         }`}
       >
         <TopBar />
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Mobile Menu Button */}
             <button
@@ -89,23 +89,22 @@ const Header = () => {
             </Link>
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center space-x-8 font-medium">
-              <Link href="/" className="hover:text-gray-400 transition-colors">
+              <Link href="/" className="transition-colors">
                 Home
               </Link>
-              <Link href="/about-us" className="hover:text-gray-400 transition-colors">
-                About
+              <Link href="/collection" className="transition-colors">
+                Collection
               </Link>
-              <Link href="/return-policy" className="hover:text-gray-400 transition-colors">
+              <Link href="/about-us" className="transition-colors">
+                About us
+              </Link>
+              <Link href="/return-policy" className="transition-colors">
                 Return Policy
               </Link>
             </nav>
             {/* Cart */}
             <div className="flex items-center">
-              <Link
-                href="/cart"
-                className="flex items-center gap-2 text-2xl hover:text-gray-400 transition-colors"
-                aria-label="Cart"
-              >
+              <Link href="/cart" className="text-2xl transition-colors" aria-label="Cart">
                 <BiShoppingBag size={24} />
               </Link>
             </div>
@@ -123,8 +122,11 @@ const Header = () => {
             <Link href="/" onClick={() => setIsOpen(false)}>
               Home
             </Link>
+            <Link href="/collection" onClick={() => setIsOpen(false)}>
+              Collection
+            </Link>
             <Link href="/about-us" onClick={() => setIsOpen(false)}>
-              About
+              About us
             </Link>
             <Link href="/return-policy" onClick={() => setIsOpen(false)}>
               Return Policy
