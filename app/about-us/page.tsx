@@ -47,7 +47,7 @@ const AboutUsPage = () => {
       </section>
       {/* Brand Story Section */}
       <section className="py-20 md:py-28">
-        <div className="container mx-auto px-6 md:px-10">
+        <div className="mx-auto px-6 md:px-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-10 uppercase tracking-wider">
               {ABOUT_US.story.title}
@@ -78,7 +78,7 @@ const AboutUsPage = () => {
       </section>
       {/* Core Values Section */}
       <section className="bg-background py-20 md:py-24 overflow-hidden">
-        <div className="container mx-auto px-6 md:px-10 text-center">
+        <div className="mx-auto px-6 md:px-10 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-16 uppercase tracking-widest text-gray-200">
             {ABOUT_US.values.title}
           </h2>
@@ -104,7 +104,7 @@ const AboutUsPage = () => {
       </section>
       {/* CTA / Charity Section */}
       <section className="py-20 md:py-28">
-        <div className="container mx-auto px-6 md:px-10 text-center max-w-2xl">
+        <div className="mx-auto px-6 md:px-10 text-center max-w-2xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 uppercase tracking-wider">
             {ABOUT_US.contact.title}
           </h2>

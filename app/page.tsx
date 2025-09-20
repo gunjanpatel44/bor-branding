@@ -1,8 +1,8 @@
 'use client'
 
-import PRODUCTS from '@/config/products.json'
-import { IProduct, ProductCard } from '@/components/ProductCard'
 import HeroCarousel from '@/components/HeroCarousel'
+import { IProduct, ProductCard } from '@/components/ProductCard'
+import PRODUCTS from '@/config/products.json'
 
 export default function HomePage() {
   return (

@@ -44,8 +44,8 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${bebas.variable} antialiased relative min-h-screen bg-brand-900 text-brand-100 overflow-x-hidden`}
       >
-        <StarryBackground />
-        <div className="relative z-10">
+        <div className="relative mx-auto z-10">
+          <StarryBackground />
           <AntdRegistry>
             <ConfigProvider theme={theme}>
               <Header />
