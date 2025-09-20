@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const ReturnPolicyPage = () => {
   return (
-    <main className="bg-black text-white">
+    <main className="bg-brand-900 text-white">
       {/* Hero Section */}
       <section className="relative h-[10vh] min-h-[350px] md:h-[40vh] flex items-center justify-center">
         <Image

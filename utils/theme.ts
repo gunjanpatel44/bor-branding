@@ -3,7 +3,7 @@ import type { ThemeConfig } from 'antd'
 const theme: ThemeConfig = {
   token: {
     colorPrimary: 'var(--color-brand)',
-    fontFamily: 'var(--font-family-poppins)',
+    fontFamily: 'var(--font-poppins)',
     borderRadius: 6,
     colorBgContainer: 'var(--color-white)',
     colorBorder: 'var(--color-gray-200)',

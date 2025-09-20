@@ -1,6 +1,6 @@
 import { AntdRegistry } from '@ant-design/nextjs-registry'
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Inter, Bebas_Neue } from 'next/font/google'
 
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
@@ -12,19 +12,20 @@ import { ConfigProvider, FloatButton } from 'antd'
 import { AiOutlineWhatsApp } from 'react-icons/ai'
 import './globals.css'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const inter = Inter({
   subsets: ['latin'],
+  variable: '--font-inter',
 })
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const bebas = Bebas_Neue({
+  weight: '400',
   subsets: ['latin'],
+  variable: '--font-bebas',
 })
 
 export const metadata: Metadata = {
-  title: 'Blck Orac',
-  description: 'Fast fashion brand',
+  title: 'Blck Orack',
+  description: 'Embrace the cracks',
 }
 
 export default function RootLayout({
@@ -41,7 +42,7 @@ export default function RootLayout({
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen bg-[#0a0a0a] text-white overflow-x-hidden`}
+        className={`${inter.variable} ${bebas.variable} antialiased relative min-h-screen bg-brand-900 text-brand-100 overflow-x-hidden`}
       >
         <StarryBackground />
         <div className="relative z-10">
