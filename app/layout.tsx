@@ -7,7 +7,6 @@ import Header from '@/components/Header'
 import { StarryBackground } from '@/components/StarryBackground'
 import COMPANY from '@/config/company.json'
 
-import TopBar from '@/components/Topbar'
 import theme from '@/utils/theme'
 import { ConfigProvider, FloatButton } from 'antd'
 import { AiOutlineWhatsApp } from 'react-icons/ai'
@@ -48,10 +47,7 @@ export default function RootLayout({
         <div className="relative z-10">
           <AntdRegistry>
             <ConfigProvider theme={theme}>
-              <div className="sticky top-0 z-50">
-                <TopBar />
-                <Header />
-              </div>
+              <Header />
               <FloatButton
                 style={{
                   insetInlineEnd: 32,
