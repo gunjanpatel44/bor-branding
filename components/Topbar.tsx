@@ -18,7 +18,7 @@ const TopBar = () => {
   if (announcements.length === 0) return null
 
   return (
-    <div className="relative h-7 overflow-hidden bg-gradient-to-r from-gray-900 via-gray-800 to-black shadow-md">
+    <div className="relative h-7 overflow-hidden bg-gradient-to-r bg-brand-900 shadow-md">
       {announcements.map((msg, i) => (
         <p
           key={i}
