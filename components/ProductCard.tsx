@@ -4,6 +4,12 @@ import Link from 'next/link'
 
 export type TProductCardTheme = 'nature' | 'mythology' | 'nostalgia'
 
+export type IProductDescription = {
+  id: number
+  title: string
+  desc: string
+}
+
 export interface IProduct {
   id: number
   slug: string
@@ -12,8 +18,7 @@ export interface IProduct {
   mrp: number
   sellingPrice: number
   description: string
-  longDescription: string
-  details: string[]
+  productAccordian: IProductDescription[]
   imageUrl: string
   gallery: string[]
   sizes: string[]
