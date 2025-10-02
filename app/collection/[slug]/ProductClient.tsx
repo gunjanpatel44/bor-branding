@@ -3,8 +3,9 @@
 
 import GradientLink from '@/components/GradientLink'
 import { IProduct } from '@/components/ProductCard'
+import ProductDescription from '@/components/ProductDescription'
 import { useState } from 'react'
-import { BiCheck, BiShield } from 'react-icons/bi'
+import { BiShield } from 'react-icons/bi'
 
 const ProductClient = ({ product }: { product: IProduct }) => {
   const [selectedSize, setSelectedSize] = useState<string | null>(product.sizes[0] || null)
@@ -76,18 +77,7 @@ const ProductClient = ({ product }: { product: IProduct }) => {
             <GradientLink href="/cart" className="text-center w-40" variant="primary">
               Add to Cart
             </GradientLink>
-            <div className="border-t border-gray-800 pt-6">
-              <h3 className="text-xl font-bold mb-4 uppercase tracking-widest">Description</h3>
-              <p className="text-gray-400 leading-relaxed">{product.longDescription}</p>
-            </div>
-            <ul className="space-y-3">
-              {product.details.map((detail, idx) => (
-                <li key={idx} className="flex items-center gap-3">
-                  <BiCheck className="w-5 h-5 text-success-500" />
-                  <span className="text-gray-300">{detail}</span>
-                </li>
-              ))}
-            </ul>
+            <ProductDescription productAccordian={product.productAccordian} />
             <div className="bg-gray-900/50 border border-gray-800 p-4 rounded-lg flex items-center gap-4">
               <BiShield className="w-8 h-8 text-gray-400" />
               <div>
