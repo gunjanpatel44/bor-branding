@@ -10,6 +10,7 @@ const Footer = () => {
   return (
     <div>
       <footer className="bg-brand text-gray-900 p-5">
+      <footer className="bg-brand text-gray-900 p-5">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Info */}
           <div className="hidden md:flex h-fit items-center gap-2">

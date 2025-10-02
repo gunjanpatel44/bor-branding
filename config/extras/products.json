@@ -1,0 +1,113 @@
+{
+  "products": [
+    {
+      "id": 4,
+      "name": "Nature Dawn Hoodie",
+      "slug": "nature-dawn-hoodie",
+      "description": "Earthy tones that rise with the morning sun.",
+      "mrp": 4499,
+      "sellingPrice": 3499,
+      "theme": "nature",
+      "imageUrl": "/t-shirts/image-tshirt-4.jpg",
+      "gallery": [
+        "/t-shirts/image-tshirt-1.jpg",
+        "/t-shirts/image-tshirt-2.jpg",
+        "/t-shirts/image-tshirt-3.jpg",
+        "/t-shirts/image-tshirt-5.jpg",
+        "/t-shirts/image-tshirt-6.jpg"
+      ],
+      "productAccordian": [
+        {
+          "id": 1,
+          "title": "Description",
+          "desc": "Adikavya, the first epic, comes alive through the timeless tale of Ramayana. This tee captures Ravan’s abduction of Sita Mata, Jatayu’s brave resistance, and the divine strength of Lord Ram, Lakshman, and Hanuman. Bold artwork on premium cotton makes this piece a reminder that righteousness, courage, and devotion always prevail."
+        },
+        {
+          "id": 2,
+          "title": "Product Details",
+          "desc": "240 GSM Heavyweight, 100% Cotton, Relaxed Oversized Fit, High-Density Screen Print, Double Bio Washed, Screen-Printed Patch Design."
+        },
+        {
+          "id": 3,
+          "title": "Care Instructions",
+          "desc": "Hand Wash in Cold Water or Dry Clean Only. Do Not Bleach. Dry in Shade to Maintain Print Quality. Iron Inside Out on Low Heat."
+        }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "ribbonText": "Limited drop",
+      "ribbonColor": "green"
+    },
+    {
+      "id": 5,
+      "name": "Mythology Krishna Tee",
+      "slug": "mythology-krishna-tee",
+      "description": "Divine blue inspired by tales of Krishna.",
+      "mrp": 3199,
+      "sellingPrice": 2399,
+      "theme": "mythology",
+      "imageUrl": "/t-shirts/image-tshirt-5.jpg",
+      "gallery": [
+        "/t-shirts/image-tshirt-1.jpg",
+        "/t-shirts/image-tshirt-2.jpg",
+        "/t-shirts/image-tshirt-3.jpg",
+        "/t-shirts/image-tshirt-4.jpg",
+        "/t-shirts/image-tshirt-6.jpg"
+      ],
+      "productAccordian": [
+        {
+          "id": 1,
+          "title": "Description",
+          "desc": "Adikavya, the first epic, comes alive through the timeless tale of Ramayana. This tee captures Ravan’s abduction of Sita Mata, Jatayu’s brave resistance, and the divine strength of Lord Ram, Lakshman, and Hanuman. Bold artwork on premium cotton makes this piece a reminder that righteousness, courage, and devotion always prevail."
+        },
+        {
+          "id": 2,
+          "title": "Product Details",
+          "desc": "240 GSM Heavyweight, 100% Cotton, Relaxed Oversized Fit, High-Density Screen Print, Double Bio Washed, Screen-Printed Patch Design."
+        },
+        {
+          "id": 3,
+          "title": "Care Instructions",
+          "desc": "Hand Wash in Cold Water or Dry Clean Only. Do Not Bleach. Dry in Shade to Maintain Print Quality. Iron Inside Out on Low Heat."
+        }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "ribbonText": "Best seller",
+      "ribbonColor": "blue"
+    },
+    {
+      "id": 6,
+      "name": "Nostalgia VHS Tee",
+      "slug": "nostalgia-vhs-tee",
+      "description": "Retro graphics inspired by VHS tapes and old-school memories.",
+      "mrp": 2899,
+      "sellingPrice": 2099,
+      "theme": "nostalgia",
+      "imageUrl": "/t-shirts/image-tshirt-6.jpg",
+      "gallery": [
+        "/t-shirts/image-tshirt-1.jpg",
+        "/t-shirts/image-tshirt-2.jpg",
+        "/t-shirts/image-tshirt-3.jpg",
+        "/t-shirts/image-tshirt-4.jpg",
+        "/t-shirts/image-tshirt-5.jpg"
+      ],
+      "productAccordian": [
+        {
+          "id": 1,
+          "title": "Description",
+          "desc": "Adikavya, the first epic, comes alive through the timeless tale of Ramayana. This tee captures Ravan’s abduction of Sita Mata, Jatayu’s brave resistance, and the divine strength of Lord Ram, Lakshman, and Hanuman. Bold artwork on premium cotton makes this piece a reminder that righteousness, courage, and devotion always prevail."
+        },
+        {
+          "id": 2,
+          "title": "Product Details",
+          "desc": "240 GSM Heavyweight, 100% Cotton, Relaxed Oversized Fit, High-Density Screen Print, Double Bio Washed, Screen-Printed Patch Design."
+        },
+        {
+          "id": 3,
+          "title": "Care Instructions",
+          "desc": "Hand Wash in Cold Water or Dry Clean Only. Do Not Bleach. Dry in Shade to Maintain Print Quality. Iron Inside Out on Low Heat."
+        }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    }
+  ]
+}
