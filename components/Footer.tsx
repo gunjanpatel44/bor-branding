@@ -15,10 +15,10 @@ export default function Footer() {
 
   return (
     <div>
-      <footer className="bg-brand text-gray-900 px-5 py-12">
+      <footer className="bg-brand text-gray-900 p-5">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Info */}
-          <div className="flex h-fit items-center gap-2">
+          <div className="hidden md:flex h-fit items-center gap-2">
             <Link href="/">
               <Image src={Logo} alt={company.name} className="size-14" />
             </Link>
@@ -32,10 +32,10 @@ export default function Footer() {
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/">Home</Link>
+                <Link href="/about-us">About Us</Link>
               </li>
               <li>
-                <Link href="/about-us">About Us</Link>
+                <Link href="/collection">Collection</Link>
               </li>
               <li>
                 <Link href="/return-policy">Return Policy</Link>

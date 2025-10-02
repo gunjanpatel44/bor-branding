@@ -1,25 +1,26 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Whispers of Growth",
-      "slug": "whispers-of-growth-tee",
-      "description": "Nature vs concrete — a story told in fabric.",
-      "mrp": 2999,
-      "sellingPrice": 2199,
+      "id": 4,
+      "name": "Nature Dawn Hoodie",
+      "slug": "nature-dawn-hoodie",
+      "description": "Earthy tones that rise with the morning sun.",
+      "mrp": 4499,
+      "sellingPrice": 3499,
       "theme": "nature",
-      "imageUrl": "/t-shirts/image-tshirt-1.jpg",
+      "imageUrl": "/t-shirts/image-tshirt-4.jpg",
       "gallery": [
+        "/t-shirts/image-tshirt-1.jpg",
         "/t-shirts/image-tshirt-2.jpg",
         "/t-shirts/image-tshirt-3.jpg",
-        "/t-shirts/image-tshirt-4.jpg",
-        "/t-shirts/image-tshirt-5.jpg"
+        "/t-shirts/image-tshirt-5.jpg",
+        "/t-shirts/image-tshirt-6.jpg"
       ],
       "productAccordian": [
         {
           "id": 1,
           "title": "Description",
-          "desc": "The Whispers of Growth contrasts the beauty of trees with the harshness of bricks, symbolizing how urban life replaces what once grew wild. A design that speaks for the environment while staying rooted in streetwear culture."
+          "desc": "Adikavya, the first epic, comes alive through the timeless tale of Ramayana. This tee captures Ravan’s abduction of Sita Mata, Jatayu’s brave resistance, and the divine strength of Lord Ram, Lakshman, and Hanuman. Bold artwork on premium cotton makes this piece a reminder that righteousness, courage, and devotion always prevail."
         },
         {
           "id": 2,
@@ -33,29 +34,30 @@
         }
       ],
       "sizes": ["S", "M", "L", "XL", "XXL"],
-      "ribbonText": "Brand new",
-      "ribbonColor": "red"
+      "ribbonText": "Limited drop",
+      "ribbonColor": "green"
     },
     {
-      "id": 2,
-      "name": "Adikavya",
-      "slug": "adikavya-tee",
-      "description": "Ramayana retold — the eternal triumph of dharma.",
-      "mrp": 2999,
-      "sellingPrice": 2199,
+      "id": 5,
+      "name": "Mythology Krishna Tee",
+      "slug": "mythology-krishna-tee",
+      "description": "Divine blue inspired by tales of Krishna.",
+      "mrp": 3199,
+      "sellingPrice": 2399,
       "theme": "mythology",
-      "imageUrl": "/t-shirts/image-tshirt-2.jpg",
+      "imageUrl": "/t-shirts/image-tshirt-5.jpg",
       "gallery": [
         "/t-shirts/image-tshirt-1.jpg",
+        "/t-shirts/image-tshirt-2.jpg",
         "/t-shirts/image-tshirt-3.jpg",
         "/t-shirts/image-tshirt-4.jpg",
-        "/t-shirts/image-tshirt-5.jpg"
+        "/t-shirts/image-tshirt-6.jpg"
       ],
       "productAccordian": [
         {
           "id": 1,
           "title": "Description",
-          "desc": "Adikavya, the first epic, comes alive on this T-shirt through the timeless tale of Ramayana. The design captures Ravan’s abduction of Sita Mata, Jatayu’s brave resistance, and the divine strength of Lord Ram, Lakshman, and Hanuman. A symbol of dharma, courage, and devotion, this piece reminds us that righteousness always prevails."
+          "desc": "Adikavya, the first epic, comes alive through the timeless tale of Ramayana. This tee captures Ravan’s abduction of Sita Mata, Jatayu’s brave resistance, and the divine strength of Lord Ram, Lakshman, and Hanuman. Bold artwork on premium cotton makes this piece a reminder that righteousness, courage, and devotion always prevail."
         },
         {
           "id": 2,
@@ -68,22 +70,23 @@
           "desc": "Hand Wash in Cold Water or Dry Clean Only. Do Not Bleach. Dry in Shade to Maintain Print Quality. Iron Inside Out on Low Heat."
         }
       ],
-      "sizes": ["S", "M", "L", "XL"],
-      "ribbonText": "Top rated",
-      "ribbonColor": "purple"
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "ribbonText": "Best seller",
+      "ribbonColor": "blue"
     },
     {
-      "id": 3,
-      "name": "Field of Memory",
-      "slug": "field-of-memory-tee",
-      "description": "Step into nostalgia with soulful streetwear.",
-      "mrp": 2999,
-      "sellingPrice": 2199,
+      "id": 6,
+      "name": "Nostalgia VHS Tee",
+      "slug": "nostalgia-vhs-tee",
+      "description": "Retro graphics inspired by VHS tapes and old-school memories.",
+      "mrp": 2899,
+      "sellingPrice": 2099,
       "theme": "nostalgia",
-      "imageUrl": "/t-shirts/image-tshirt-3.jpg",
+      "imageUrl": "/t-shirts/image-tshirt-6.jpg",
       "gallery": [
         "/t-shirts/image-tshirt-1.jpg",
         "/t-shirts/image-tshirt-2.jpg",
+        "/t-shirts/image-tshirt-3.jpg",
         "/t-shirts/image-tshirt-4.jpg",
         "/t-shirts/image-tshirt-5.jpg"
       ],
@@ -91,7 +94,7 @@
         {
           "id": 1,
           "title": "Description",
-          "desc": "Step into the nostalgia of Indian childhood with the Fields of Memory. Inspired by days spent playing in the fields and gathering by the water, it captures the essence of simple joys and timeless bonds. With bold artwork on a deep textured base, this tee blends streetwear aesthetics with soulful tradition — a wearable memory."
+          "desc": "Adikavya, the first epic, comes alive through the timeless tale of Ramayana. This tee captures Ravan’s abduction of Sita Mata, Jatayu’s brave resistance, and the divine strength of Lord Ram, Lakshman, and Hanuman. Bold artwork on premium cotton makes this piece a reminder that righteousness, courage, and devotion always prevail."
         },
         {
           "id": 2,
