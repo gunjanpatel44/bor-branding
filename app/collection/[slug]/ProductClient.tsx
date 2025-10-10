@@ -9,6 +9,7 @@ import { IProduct } from '@/utils/types'
 import Image from 'next/image'
 import { useState, useMemo } from 'react'
 import { BiShield } from 'react-icons/bi'
+import company from '@/config/company.json'
 
 const ProductClient = ({ product }: { product: IProduct }) => {
   const [selectedSize, setSelectedSize] = useState<string | null>(product.sizes[0] || null)
