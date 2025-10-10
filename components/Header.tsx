@@ -1,45 +1,23 @@
 'use client'
 
-import COMPANY from '@/config/company.json'
+import company from '@/config/company.json'
 import Logo from '@/public/logo/bor-logo.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import {
-  AiFillInstagram,
-  AiFillYoutube,
-  AiOutlineWhatsApp,
-  AiOutlineMenu,
   AiOutlineClose,
+  AiOutlineInstagram,
+  AiOutlineMenu,
+  AiOutlineWhatsApp,
+  AiOutlineYoutube,
 } from 'react-icons/ai'
-import { BiShoppingBag } from 'react-icons/bi'
-import { useWindowScroll } from 'react-use'
+import CountdownTimer from './CountDownTimer'
 import TopBar from './Topbar'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [isVisible, setIsVisible] = useState(true)
-  const lastScrollY = useRef(0)
   const headerRef = useRef<HTMLElement>(null)
-
-  const { y } = useWindowScroll()
-
-  useEffect(() => {
-    // Desktop: always show
-    if (window.innerWidth >= 768) {
-      setIsVisible(true)
-      return
-    }
-    const headerHeight = headerRef.current?.offsetHeight || 70
-    if (y > lastScrollY.current && y > headerHeight) {
-      // scrolling down
-      setIsVisible(false)
-    } else {
-      // scrolling up
-      setIsVisible(true)
-    }
-    lastScrollY.current = y
-  }, [y])
 
   // Lock body scroll when mobile menu open
   useEffect(() => {
@@ -53,11 +31,13 @@ const Header = () => {
     <>
       <header
         ref={headerRef}
-        className={`bg-brand text-brand-900 border-b border-gray-800/50 sticky top-0 z-40 transition-transform duration-300 ${
-          isVisible ? 'translate-y-0' : '-translate-y-full'
-        }`}
+        className={`bg-brand text-brand-900 border-b border-gray-800/50 sticky top-0 z-40 transition-transform duration-300 `}
       >
-        <TopBar />
+        {company.saleEndDate && new Date() < new Date(company.saleEndDate) ? (
+          <CountdownTimer endDate={company.saleEndDate} />
+        ) : (
+          <TopBar />
+        )}
         <div className="mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Mobile Menu Button */}
@@ -84,8 +64,8 @@ const Header = () => {
               className="flex items-center gap-2 absolute left-1/2 -translate-x-1/2 md:static md:left-0 md:translate-x-0"
               href="/"
             >
-              <Image src={Logo} alt={COMPANY.name} className="size-10 w-auto" />
-              <span className="text-2xl hidden sm:block font-times uppercase">{COMPANY.name}</span>
+              <Image src={Logo} alt={company.name} className="size-10 w-auto" />
+              <span className="text-2xl hidden sm:block font-times uppercase">{company.name}</span>
             </Link>
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center space-x-8 font-medium">
@@ -98,14 +78,19 @@ const Header = () => {
               <Link href="/about-us" className="transition-colors">
                 About us
               </Link>
-              <Link href="/return-policy" className="transition-colors">
-                Return Policy
+              <Link href="/exchange-policy" className="transition-colors">
+                Exchange Policy
               </Link>
             </nav>
-            {/* Cart */}
-            <div className="flex items-center">
-              <Link href="/cart" className="text-2xl transition-colors" aria-label="Cart">
-                <BiShoppingBag size={24} />
+            {/* Instagram */}
+            <div className="flex justify-between items-center gap-2">
+              <Link
+                href={company.instagramLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors"
+              >
+                <AiOutlineInstagram className="w-7 h-7" />
               </Link>
             </div>
           </div>
@@ -113,7 +98,7 @@ const Header = () => {
       </header>
       {/* Sidebar Drawer */}
       <div
-        className={`fixed top-16 left-0 h-[calc(100vh-8rem)] w-full text-brand-900 bg-brand/80 backdrop-blur-lg transform transition-transform duration-300 ease-in-out z-30 md:hidden
+        className={`fixed top-0 left-0 h-[calc(100vh-92px)] w-full text-brand-900 bg-brand/80 backdrop-blur-lg transform transition-transform duration-300 ease-in-out z-30 md:hidden
   ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
         <div className="flex flex-col justify-between h-full">
@@ -128,36 +113,36 @@ const Header = () => {
             <Link href="/about-us" onClick={() => setIsOpen(false)}>
               About us
             </Link>
-            <Link href="/return-policy" onClick={() => setIsOpen(false)}>
-              Return Policy
+            <Link href="/exchange-policy" onClick={() => setIsOpen(false)}>
+              Exchange Policy
             </Link>
           </div>
           {/* Social Links */}
-          <div className="w-full p-6">
+          <div className="w-full mb-12">
             <ul className="flex justify-center gap-6 text-3xl">
               <li>
                 <Link
-                  href={COMPANY.instagramLink}
+                  href={company.instagramLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-colors"
                 >
-                  <AiFillInstagram />
+                  <AiOutlineInstagram />
                 </Link>
               </li>
               <li>
                 <Link
-                  href={COMPANY.youtubeLink}
+                  href={company.youtubeLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-colors"
                 >
-                  <AiFillYoutube />
+                  <AiOutlineYoutube />
                 </Link>
               </li>
               <li>
                 <Link
-                  href={COMPANY.whatsappLink}
+                  href={company.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-colors"

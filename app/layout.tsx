@@ -4,7 +4,6 @@ import { Inter, Bebas_Neue } from 'next/font/google'
 
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import { StarryBackground } from '@/components/StarryBackground'
 import COMPANY from '@/config/company.json'
 
 import theme from '@/utils/theme'
@@ -45,7 +44,6 @@ export default function RootLayout({
         className={`${inter.variable} ${bebas.variable} antialiased relative min-h-screen bg-brand-900 text-brand-100 overflow-x-hidden`}
       >
         <div className="relative mx-auto z-10">
-          <StarryBackground />
           <AntdRegistry>
             <ConfigProvider theme={theme}>
               <Header />

@@ -1,9 +1,10 @@
 'use client'
-/* eslint-disable @next/next/no-img-element */
 
 import GradientLink from '@/components/GradientLink'
 import { IProduct } from '@/components/ProductCard'
 import ProductDescription from '@/components/ProductDescription'
+import company from '@/config/company.json'
+import Image from 'next/image'
 import { useState } from 'react'
 import { BiShield } from 'react-icons/bi'
 
@@ -16,11 +17,11 @@ const ProductClient = ({ product }: { product: IProduct }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Image Gallery */}
           <div className="flex flex-col gap-4">
-            <div className="aspect-square bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-800">
-              <img
+            <div className="aspect-auto bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-800">
+              <Image
                 src={activeImage}
                 alt={product.name}
-                className="w-full h-full object-cover transition-opacity duration-300"
+                className="w-full h-full transition-opacity duration-300 z-50"
               />
             </div>
             <div className="grid grid-cols-5 gap-3">
@@ -34,10 +35,10 @@ const ProductClient = ({ product }: { product: IProduct }) => {
                       : 'border-gray-800 hover:border-gray-600'
                   }`}
                 >
-                  <img
+                  <Image
                     src={img}
                     alt={`${product.name} thumbnail ${idx + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover z-50"
                   />
                 </div>
               ))}
@@ -74,8 +75,12 @@ const ProductClient = ({ product }: { product: IProduct }) => {
                 ))}
               </div>
             </div>
-            <GradientLink href="/cart" className="text-center w-40" variant="primary">
-              Add to Cart
+            <GradientLink
+              href={company.whatsappLink}
+              className="text-center w-40"
+              variant="primary"
+            >
+              Buy Now
             </GradientLink>
             <ProductDescription productAccordian={product.productAccordian} />
             <div className="bg-gray-900/50 border border-gray-800 p-4 rounded-lg flex items-center gap-4">

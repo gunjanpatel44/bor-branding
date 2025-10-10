@@ -2,13 +2,8 @@ import company from '@/config/company.json'
 import Logo from '@/public/logo/bor-logo.png'
 import Image from 'next/image'
 import Link from 'next/link'
-import {
-  AiFillInstagram,
-  AiFillMail,
-  AiFillPhone,
-  AiFillYoutube,
-  AiOutlineWhatsApp,
-} from 'react-icons/ai'
+import { AiFillInstagram, AiFillMail, AiFillPhone, AiFillYoutube } from 'react-icons/ai'
+import { TbBrandWhatsappFilled } from 'react-icons/tb'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -38,7 +33,7 @@ export default function Footer() {
                 <Link href="/collection">Collection</Link>
               </li>
               <li>
-                <Link href="/return-policy">Return Policy</Link>
+                <Link href="/exchange-policy">Exchange Policy</Link>
               </li>
             </ul>
           </div>
@@ -53,7 +48,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href={company.whatsappLink} target="_blank" rel="noopener noreferrer">
-                  <AiOutlineWhatsApp className="hover:text-whatsapp transition-colors" />
+                  <TbBrandWhatsappFilled className="hover:text-whatsapp transition-colors" />
                 </Link>
               </li>
               <li>

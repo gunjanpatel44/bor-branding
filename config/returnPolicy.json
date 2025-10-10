@@ -1,43 +1,39 @@
 {
   "meta": {
-    "title": "Return Policy | Blckorack",
-    "description": "Learn about the return and exchange policy for Blckorack. We're committed to ensuring you're satisfied with your premium streetwear.",
-    "keywords": "return policy, exchange, refund, Blckorack, streetwear returns"
+    "title": "Exchange Policy | Blckorack",
+    "description": "Learn about the exchange policy for Blckorack. We ensure an easy and transparent process if your order doesn’t fit as expected.",
+    "keywords": "exchange policy, exchange, size exchange, Blckorack, streetwear exchange"
   },
   "hero": {
-    "title": "Return & Exchange Policy"
+    "title": "Exchange Policy"
   },
   "policy": {
-    "lastUpdated": "September 20, 2025",
-    "introduction": "At Blckorack, we value your trust and strive to provide you with the best shopping experience. If for any reason you are not fully satisfied with your purchase, you can return the product under the following terms and conditions:",
+    "lastUpdated": "October 10, 2025",
+    "introduction": "At Blckorack, we value your trust and aim to provide you with the best shopping experience. If your order doesn’t fit as expected, you can easily exchange it for a different size under the following terms and conditions:",
     "sections": [
       {
-        "title": "Return Booking",
-        "content": "Returns must be booked within 24 hours of delivery. To initiate a return, please DM us on Instagram at @blckorack.in."
+        "title": "Exchange Booking",
+        "content": "Exchange requests must be booked within 48 hours of delivery. To initiate an exchange, please DM us on Instagram at @blckorack.in."
       },
       {
-        "title": "Return Pickup",
-        "content": "Once your return is booked, a delivery partner will pick up the order within 48 hours from your address."
+        "title": "Exchange Pickup",
+        "content": "Once your exchange is booked, a delivery partner will pick up the product from your address within 48 hours."
       },
       {
-        "title": "Return Charges",
-        "content": "A return charge of ₹150 will be applicable. This charge will be deducted from your refund amount."
+        "title": "Exchange Charges",
+        "content": "A ₹150 exchange charge will be applicable. This amount covers the pickup and re-shipping process and must be paid before dispatch of the exchanged item."
       },
       {
         "title": "Quality Check & Processing",
-        "content": "Once the returned product reaches our warehouse, it will undergo a Quality Check (QC) process. After successful QC approval, your refund will be processed."
-      },
-      {
-        "title": "Refunds",
-        "content": "Once we receive and inspect your returned item, we will notify you of the approval or rejection of your refund. If approved, your refund will be processed, and a credit will automatically be applied to your original method of payment within 7-10 business days."
+        "content": "Once the product reaches our warehouse, it will undergo a Quality Check (QC). After successful QC approval, the new size will be shipped to you."
       },
       {
         "title": "Timelines",
-        "content": "The complete return and refund process usually takes 6–7 working days from the date of pickup."
+        "content": "The complete exchange process usually takes 6–7 working days from the date of pickup."
       },
       {
         "title": "Important Note",
-        "content": "Products must be returned in their original condition with tags and packaging intact. Returns that fail QC will not be eligible for a refund."
+        "content": "• Products must be returned in their original condition, with tags and packaging intact.\n• Exchanges are only applicable for size issues and are subject to product availability.\n• Products that fail QC or are found to be worn/used will not be eligible for exchange."
       }
     ]
   }

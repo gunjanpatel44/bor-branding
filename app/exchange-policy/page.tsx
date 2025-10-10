@@ -43,7 +43,7 @@ const ReturnPolicyPage = () => {
           </div>
           <div className="mt-16 text-center text-gray-500 border-t border-gray-800 pt-8">
             <p>
-              For any questions regarding our return policy, please don&apos;t hesitate to reach
+              For any questions regarding our exchange policy, please don&apos;t hesitate to reach
               out.
             </p>
             <a

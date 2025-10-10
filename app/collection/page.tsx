@@ -1,7 +1,7 @@
 'use client'
 
 import { IProduct, ProductCard } from '@/components/ProductCard'
-import PRODUCTS from '@/config/products.json'
+import { products } from '@/config/products'
 import COLLECTION from '@/config/collection.json'
 
 const Collection = () => {
@@ -20,7 +20,7 @@ const Collection = () => {
       </div>
       {/* Product Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
-        {PRODUCTS.products.map((product) => (
+        {products.map((product) => (
           <ProductCard key={product.id} product={product as IProduct} />
         ))}
       </div>

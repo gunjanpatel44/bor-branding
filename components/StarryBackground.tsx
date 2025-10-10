@@ -39,7 +39,7 @@ export const StarryBackground: React.FC = () => {
   return (
     <>
       {/* Moving Stars */}
-      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 -z-20 overflow-hidden">
         {stars.map((star, idx) => (
           <div
             key={idx}
