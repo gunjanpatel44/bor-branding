@@ -5,6 +5,8 @@ interface GradientLinkProps extends React.ButtonHTMLAttributes<HTMLButtonElement
   className?: string
   children: React.ReactNode
   href: string
+  target?: string
+  rel?: string
 }
 
 const GradientLink = ({
@@ -12,6 +14,8 @@ const GradientLink = ({
   children,
   className = '',
   href,
+  target,
+  rel,
 }: GradientLinkProps) => {
   const variants: Record<GradientLinkVariant, string> = {
     primary: 'bg-btn-brand hover:shadow-glow-nature',
@@ -22,6 +26,8 @@ const GradientLink = ({
   return (
     <a
       href={href}
+      target={target}
+      rel={rel}
       className={`${variants[variant]} ${className} text-brand-100 font-medium px-6 py-3 rounded-xl transition-all duration-300 transform -translate-y-1 relative overflow-hidden group cursor-pointer inline-block`}
     >
       {/* Shine effect */}

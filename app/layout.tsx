@@ -1,10 +1,11 @@
 import { AntdRegistry } from '@ant-design/nextjs-registry'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata } from 'next'
-import { Inter, Bebas_Neue } from 'next/font/google'
+import { Bebas_Neue, Inter } from 'next/font/google'
 
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import COMPANY from '@/config/company.json'
+import company from '@/config/company.json'
 
 import theme from '@/utils/theme'
 import { ConfigProvider, FloatButton } from 'antd'
@@ -43,6 +44,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${bebas.variable} antialiased relative min-h-screen bg-brand-900 text-brand-100 overflow-x-hidden`}
       >
+        <GoogleAnalytics gaId="G-0DTR0WYN51" />
         <div className="relative mx-auto z-10">
           <AntdRegistry>
             <ConfigProvider theme={theme}>
@@ -57,7 +59,7 @@ export default function RootLayout({
                 type="primary"
                 target="_blank"
                 icon={<AiOutlineWhatsApp />}
-                href={COMPANY.whatsappLink}
+                href={company.whatsappLink}
               />
               {children}
               <Footer />

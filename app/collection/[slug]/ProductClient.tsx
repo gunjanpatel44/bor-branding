@@ -5,12 +5,19 @@ import { IProduct } from '@/components/ProductCard'
 import ProductDescription from '@/components/ProductDescription'
 import company from '@/config/company.json'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { BiShield } from 'react-icons/bi'
 
 const ProductClient = ({ product }: { product: IProduct }) => {
   const [selectedSize, setSelectedSize] = useState<string | null>(product.sizes[0] || null)
   const [activeImage, setActiveImage] = useState(product.imageUrl)
+
+  const whatsappMessage = useMemo(() => {
+    const baseMessage = `Hey! I’d like to order the ${product.name} ${product.category}`
+    const sizePart = selectedSize ? ` (Size: ${selectedSize})` : ''
+    return encodeURIComponent(`${baseMessage}${sizePart}`)
+  }, [product.name, product.category, selectedSize])
+
   return (
     <main className="bg-black text-white min-h-screen py-12 md:py-20">
       <div className="mx-auto px-6 md:px-10">
@@ -76,9 +83,11 @@ const ProductClient = ({ product }: { product: IProduct }) => {
               </div>
             </div>
             <GradientLink
-              href={company.whatsappLink}
+              href={`${company.whatsappLink}?text=${whatsappMessage}`}
               className="text-center w-40"
               variant="primary"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Buy Now
             </GradientLink>
