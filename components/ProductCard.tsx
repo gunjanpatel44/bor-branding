@@ -25,6 +25,7 @@ export interface IProduct {
   sizes: string[]
   ribbonText?: string
   ribbonColor?: string
+  comingSoon?: boolean
 }
 
 interface IProductCardProps {
@@ -45,6 +46,7 @@ export const ProductCard = ({
     imageUrl,
     ribbonText,
     ribbonColor,
+    comingSoon,
   },
   className = '',
 }: IProductCardProps) => {
@@ -60,17 +62,11 @@ export const ProductCard = ({
       className={`bg-gradient-to-br group p-5 rounded-2xl border text-white transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-black/60 cursor-pointer h-full ${themeClasses[theme]} ${className}`}
     >
       <div className="transform transition-transform duration-300 group-hover:scale-105 h-full flex flex-col">
-        <div className="overflow-hidden rounded-xl mb-4 relative">
-          {imageUrl ? (
-            <Image src={imageUrl} alt={name} className="w-full h-full object-cover" />
-          ) : (
-            <div className="w-full h-[400px] flex flex-col items-center justify-center bg-gradient-to-br from-gray-800 via-gray-900 to-black text-center rounded-xl relative overflow-hidden">
-              <div className="absolute inset-0 opacity-30"></div>
-              <h3 className="text-2xl font-bold text-white z-10">Coming Soon</h3>
-              <p className="text-gray-400 text-sm mt-1 z-10">Stay tuned for the drop.</p>
-            </div>
-          )}
-        </div>
+        <Image
+          src={imageUrl}
+          alt={name}
+          className="w-full h-full object-cover overflow-hidden rounded-xl mb-4"
+        />
         <div className="flex p-2 flex-col gap-1 mt-auto">
           <h3 className="text-xl font-bold text-white truncate">{name}</h3>
           <p className="text-gray-400 truncate">{description}</p>
@@ -86,7 +82,7 @@ export const ProductCard = ({
 
   return (
     <>
-      {imageUrl ? (
+      {!comingSoon ? (
         <Link href={`/collection/${slug}`} className="block h-full">
           {ribbonText ? (
             <Ribbon text={ribbonText} color={ribbonColor || 'red'}>

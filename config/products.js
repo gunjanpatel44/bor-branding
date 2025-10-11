@@ -18,11 +18,12 @@ import FieldOfMemory7 from '@/public/album/Fields of Memory/fields-of-memory-7.w
 import FieldOfMemory8 from '@/public/album/Fields of Memory/fields-of-memory-8.webp'
 // import FieldOfMemory9 from '@/public/album/Fields of Memory/fields-of-memory-9.webp'
 import FieldOfMemory10 from '@/public/album/Fields of Memory/fields-of-memory-10.webp'
-// import Adikavya1 from '/album/Adikavya/adikavya-1.webp'
-// import Adikavya2 from '/album/Adikavya/adikavya-2.webp'
-// import Adikavya3 from '/album/Adikavya/adikavya-3.webp'
-// import Adikavya4 from '/album/Adikavya/adikavya-4.webp'
-// import Adikavya5 from '/album/Adikavya/adikavya-5.webp'
+// import Adikavya1 from '@/public/album/Adikavya/adikavya-1.webp'
+// import Adikavya2 from '@/public/album/Adikavya/adikavya-2.webp'
+// import Adikavya3 from '@/public/album/Adikavya/adikavya-3.webp'
+// import Adikavya4 from '@/public/album/Adikavya/adikavya-4.webp'
+// import Adikavya5 from '@/public/album/Adikavya/adikavya-5.webp'
+import ComingSoon from '@/public/album/Coming Soon/ComingSoon.webp'
 
 export const products = [
   {
@@ -113,9 +114,9 @@ export const products = [
     sellingPrice: '1***',
     theme: 'adikavya',
     category: 'T-Shirt',
-    // imageUrl: Adikavya1,
+    imageUrl: ComingSoon,
     // gallery: [Adikavya2, Adikavya3, Adikavya4, Adikavya5],
-    imageUrl: null,
+    comingSoon: true,
     gallery: [],
     productAccordian: [
       {
