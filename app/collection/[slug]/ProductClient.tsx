@@ -1,9 +1,10 @@
 'use client'
 
 import GradientLink from '@/components/GradientLink'
-import { IProduct } from '@/components/ProductCard'
 import ProductDescription from '@/components/ProductDescription'
+// import ReviewForm from '@/components/Review'
 import company from '@/config/company.json'
+import { IProduct } from '@/utils/types'
 import Image from 'next/image'
 import { useState, useMemo } from 'react'
 import { BiShield } from 'react-icons/bi'
@@ -28,6 +29,8 @@ const ProductClient = ({ product }: { product: IProduct }) => {
               <Image
                 src={activeImage}
                 alt={product.name}
+                width={500}
+                height={200}
                 className="w-full h-full transition-opacity duration-300 z-50"
               />
             </div>
@@ -45,6 +48,8 @@ const ProductClient = ({ product }: { product: IProduct }) => {
                   <Image
                     src={img}
                     alt={`${product.name} thumbnail ${idx + 1}`}
+                    width={500}
+                    height={200}
                     className="w-full h-full object-cover z-50"
                   />
                 </div>
@@ -104,6 +109,7 @@ const ProductClient = ({ product }: { product: IProduct }) => {
           </div>
         </div>
       </div>
+      {/* <ReviewForm /> */}
     </main>
   )
 }

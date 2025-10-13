@@ -2,7 +2,8 @@ import { notFound } from 'next/navigation'
 import { products } from '@/config/products'
 import type { Metadata } from 'next'
 import ProductClient from './ProductClient'
-import { IProduct } from '@/components/ProductCard'
+import { StaticImageData } from 'next/image'
+import { IProduct } from '@/utils/types'
 
 // Generate static pages for each product at build time
 export async function generateStaticParams() {
@@ -15,9 +16,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
-  const product = products.find((p) => p.slug === params.slug) as IProduct | undefined
+  const { slug } = await params
+  const product = products.find((p) => p.slug === slug) as IProduct | undefined
   if (!product) {
     return { title: 'Product Not Found | Blckorack' }
   }
@@ -30,8 +32,12 @@ export async function generateMetadata({
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const product = products.find((p) => p.slug === slug)
-  if (!product) {
-    notFound()
+  if (!product) notFound()
+  const plainProduct = {
+    ...product,
+    imageUrl: product.imageUrl?.src || product.imageUrl,
+    gallery: product.gallery?.map((img: StaticImageData) => img.src || img),
   }
-  return <ProductClient product={product as IProduct} />
+
+  return <ProductClient product={plainProduct as IProduct} />
 }

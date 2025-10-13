@@ -1,16 +1,15 @@
-import { AntdRegistry } from '@ant-design/nextjs-registry'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata } from 'next'
 import { Bebas_Neue, Inter } from 'next/font/google'
 
+import { FloatButton } from 'antd'
+import { AiOutlineWhatsApp } from 'react-icons/ai'
+import './globals.css'
+
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import company from '@/config/company.json'
-
-import theme from '@/utils/theme'
-import { ConfigProvider, FloatButton } from 'antd'
-import { AiOutlineWhatsApp } from 'react-icons/ai'
-import './globals.css'
+import Providers from './providers'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -45,27 +44,25 @@ export default function RootLayout({
         className={`${inter.variable} ${bebas.variable} antialiased relative min-h-screen bg-brand-900 text-brand-100 overflow-x-hidden`}
       >
         <GoogleAnalytics gaId="G-0DTR0WYN51" />
-        <div className="relative mx-auto z-10">
-          <AntdRegistry>
-            <ConfigProvider theme={theme}>
-              <Header />
-              <FloatButton
-                style={{
-                  insetInlineEnd: 32,
-                  insetBlockEnd: 32,
-                  height: 56,
-                  width: 56,
-                }}
-                type="primary"
-                target="_blank"
-                icon={<AiOutlineWhatsApp />}
-                href={company.whatsappLink}
-              />
-              {children}
-              <Footer />
-            </ConfigProvider>
-          </AntdRegistry>
-        </div>
+        <Providers>
+          <div className="relative mx-auto z-10">
+            <Header />
+            <FloatButton
+              style={{
+                insetInlineEnd: 32,
+                insetBlockEnd: 32,
+                height: 56,
+                width: 56,
+              }}
+              type="primary"
+              target="_blank"
+              icon={<AiOutlineWhatsApp />}
+              href={company.whatsappLink}
+            />
+            {children}
+            <Footer />
+          </div>
+        </Providers>
       </body>
     </html>
   )

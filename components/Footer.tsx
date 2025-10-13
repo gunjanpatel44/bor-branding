@@ -15,7 +15,7 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="hidden md:flex h-fit items-center gap-2">
             <Link href="/">
-              <Image src={Logo} alt={company.name} className="size-14" />
+              <Image src={Logo} alt={company.name} width={500} height={200} className="size-14" />
             </Link>
             <div className="flex flex-col items-center">
               <p className="font-times uppercase text-2xl">{company.name}</p>

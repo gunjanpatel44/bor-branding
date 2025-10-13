@@ -1,5 +1,5 @@
+import { IProductDescription } from '@/utils/types'
 import { useState } from 'react'
-import { IProductDescription } from './ProductCard'
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from 'react-icons/md'
 
 const ProductDescription = ({ productAccordian }: { productAccordian: IProductDescription[] }) => {

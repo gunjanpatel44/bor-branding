@@ -1,32 +1,7 @@
+import { IProduct, TProductCardTheme } from '@/utils/types'
 import Ribbon from 'antd/es/badge/Ribbon'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
-
-export type TProductCardTheme = 'fieldsOfMemory' | 'whispersOfGrowth' | 'adikavya'
-
-export type IProductDescription = {
-  id: number
-  title: string
-  desc: string
-}
-
-export interface IProduct {
-  id: number
-  slug: string
-  name: string
-  theme: TProductCardTheme
-  mrp: number
-  sellingPrice: number
-  description: string
-  category: string
-  productAccordian: IProductDescription[]
-  imageUrl: StaticImageData
-  gallery: StaticImageData[]
-  sizes: string[]
-  ribbonText?: string
-  ribbonColor?: string
-  comingSoon?: boolean
-}
 
 interface IProductCardProps {
   product: IProduct
@@ -65,6 +40,8 @@ export const ProductCard = ({
         <Image
           src={imageUrl}
           alt={name}
+          width={500}
+          height={200}
           className="w-full h-full object-cover overflow-hidden rounded-xl mb-4"
         />
         <div className="flex p-2 flex-col gap-1 mt-auto">

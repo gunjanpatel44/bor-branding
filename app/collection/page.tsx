@@ -1,8 +1,9 @@
 'use client'
 
-import { IProduct, ProductCard } from '@/components/ProductCard'
+import { ProductCard } from '@/components/ProductCard'
 import { products } from '@/config/products'
 import COLLECTION from '@/config/collection.json'
+import { IProduct } from '@/utils/types'
 
 const Collection = () => {
   return (

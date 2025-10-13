@@ -64,7 +64,13 @@ const Header = () => {
               className="flex items-center gap-2 absolute left-1/2 -translate-x-1/2 md:static md:left-0 md:translate-x-0"
               href="/"
             >
-              <Image src={Logo} alt={company.name} className="size-10 w-auto" />
+              <Image
+                src={Logo}
+                alt={company.name}
+                width={500}
+                height={200}
+                className="size-10 w-auto"
+              />
               <span className="text-2xl hidden sm:block font-times uppercase">{company.name}</span>
             </Link>
             {/* Desktop Nav */}

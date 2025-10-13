@@ -1,9 +1,10 @@
 'use client'
 
 import HeroCarousel from '@/components/HeroCarousel'
-import { IProduct, ProductCard } from '@/components/ProductCard'
+import { ProductCard } from '@/components/ProductCard'
 import { StarryBackground } from '@/components/StarryBackground'
 import { products } from '@/config/products'
+import { IProduct } from '@/utils/types'
 
 export default function HomePage() {
   return (

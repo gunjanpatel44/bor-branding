@@ -24,6 +24,7 @@ import FieldOfMemory10 from '@/public/album/Fields of Memory/fields-of-memory-10
 // import Adikavya4 from '@/public/album/Adikavya/adikavya-4.webp'
 // import Adikavya5 from '@/public/album/Adikavya/adikavya-5.webp'
 import ComingSoon from '@/public/album/Coming Soon/ComingSoon.webp'
+import TShirtSizeChart from '@/public/size-chart/box-fit-tshirt-size-chart.webp'
 
 export const products = [
   {
@@ -43,6 +44,7 @@ export const products = [
       FieldOfMemory7,
       FieldOfMemory4,
       FieldOfMemory5,
+      TShirtSizeChart,
     ],
     productAccordian: [
       {
@@ -95,6 +97,7 @@ export const products = [
       WhispersOfGrowth9,
       WhispersOfGrowth4,
       WhispersOfGrowth5,
+      TShirtSizeChart,
     ],
     productAccordian: [
       {
@@ -139,7 +142,7 @@ export const products = [
     theme: 'adikavya',
     category: 'T-Shirt',
     imageUrl: ComingSoon,
-    // gallery: [Adikavya2, Adikavya3, Adikavya4, Adikavya5],
+    // gallery: [Adikavya2, Adikavya3, Adikavya4, Adikavya5, TShirtSizeChart,],
     comingSoon: true,
     gallery: [],
     productAccordian: [
@@ -176,3 +179,6 @@ export const products = [
     // ribbonColor: 'purple',
   },
 ]
+
+export const productSlugs = ['fields-of-memory-tee', 'whispers-of-growth-tee']
+// 'adikavya-tee'
