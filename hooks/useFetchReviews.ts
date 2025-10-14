@@ -1,11 +1,19 @@
-import { fetchReviews } from '@/services'
-import cacheKeys from '@/utils/cacheKeys'
 import { useQuery } from '@tanstack/react-query'
+import cacheKeys from '@/utils/cacheKeys'
+import { fetchReviews } from '@/services'
 
-const useFetchRevies = () =>
+interface UseFetchReviewsParams {
+  slug?: string
+  page?: number
+  limit?: number
+}
+
+const useFetchReviews = ({ slug, page = 1, limit = 10 }: UseFetchReviewsParams) =>
   useQuery({
-    queryKey: [cacheKeys.REVIEWS],
-    queryFn: fetchReviews,
+    queryKey: [cacheKeys.REVIEWS, slug, page, limit],
+    queryFn: () => fetchReviews({ slug, page, limit }),
+    enabled: !!slug,
+    placeholderData: (previousData) => previousData,
   })
 
-export default useFetchRevies
+export default useFetchReviews

@@ -5,7 +5,7 @@ const theme: ThemeConfig = {
     colorPrimary: 'var(--color-brand)',
     fontFamily: 'var(--font-poppins)',
     borderRadius: 6,
-    colorBgContainer: 'var(--color-white)',
+    // colorBgContainer: 'var(--color-white)',
     colorBorder: 'var(--color-gray-200)',
     colorBorderSecondary: 'var(--color-gray-100)',
   },
@@ -14,13 +14,6 @@ const theme: ThemeConfig = {
       cellPaddingBlock: 5,
       borderColor: 'var(--color-gray-200)',
       headerBorderRadius: 0,
-    },
-    Button: {
-      colorPrimary: 'var(--color-brand)',
-      colorPrimaryHover: 'var(--color-brand-600)',
-      colorPrimaryActive: 'var(--color-brand-700)',
-      defaultBg: 'var(--color-brand-100)',
-      defaultBorderColor: 'var(--color-brand-300)',
     },
     FloatButton: {
       fontSizeIcon: 24,
@@ -37,6 +30,21 @@ const theme: ThemeConfig = {
       hoverBorderColor: 'var(--color-brand-300)',
       activeShadow: '0 0 0 2px var(--color-brand)',
       controlHeight: 42,
+    },
+    Select: {
+      colorPrimary: 'var(--color-brand)',
+      activeBorderColor: 'var(--color-brand)',
+      hoverBorderColor: 'var(--color-brand-300)',
+      controlHeight: 42,
+    },
+    Button: {
+      colorPrimary: 'var(--color-gray-700)',
+      controlHeight: 42,
+      boxShadow: 'none',
+    },
+    Rate: {
+      colorFillContent: '#facc15',
+      starBg: '#6b7280',
     },
     Menu: {
       itemSelectedColor: 'var(--color-brand-700)',

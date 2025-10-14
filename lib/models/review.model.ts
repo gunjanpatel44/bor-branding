@@ -6,20 +6,10 @@ export interface IReview extends Document {
   product_slug: string
   stars: number
   description?: string
-  media?: string[]
-  createdAt: Date
-  updatedAt: Date
+  media?: mongoose.Types.ObjectId[]
+  created_at: Date
+  updated_at: Date
 }
-
-const MediaSchema = new Schema(
-  {
-    media_id: {
-      type: Schema.Types.ObjectId,
-      ref: Media.modelName,
-    },
-  },
-  { _id: false }
-)
 
 const ReviewSchema = new Schema<IReview>(
   {
@@ -43,10 +33,15 @@ const ReviewSchema = new Schema<IReview>(
       type: String,
       trim: true,
     },
-    media: [MediaSchema],
+    media: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: Media.modelName,
+      },
+    ],
   },
   {
-    timestamps: true,
+    timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' },
   }
 )
 

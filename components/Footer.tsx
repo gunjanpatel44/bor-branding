@@ -5,9 +5,8 @@ import Link from 'next/link'
 import { AiFillInstagram, AiFillMail, AiFillPhone, AiFillYoutube } from 'react-icons/ai'
 import { TbBrandWhatsappFilled } from 'react-icons/tb'
 
-export default function Footer() {
+const Footer = () => {
   const currentYear = new Date().getFullYear()
-
   return (
     <div>
       <footer className="bg-brand text-gray-900 p-5">
@@ -99,3 +98,5 @@ export default function Footer() {
     </div>
   )
 }
+
+export default Footer

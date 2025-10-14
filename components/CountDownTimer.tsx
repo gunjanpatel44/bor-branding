@@ -6,8 +6,9 @@ interface CountdownTimerProps {
   endDate: string // e.g.,  "2025-10-13T12:39:00+05:30" (ISO format)
 }
 
-export default function CountdownTimer({ endDate }: CountdownTimerProps) {
+const CountdownTimer = ({ endDate }: CountdownTimerProps) => {
   const [timeLeft, setTimeLeft] = useState(0)
+
   useEffect(() => {
     const endTime = new Date(endDate).getTime()
     const updateTimer = () => {
@@ -44,3 +45,5 @@ export default function CountdownTimer({ endDate }: CountdownTimerProps) {
     </div>
   )
 }
+
+export default CountdownTimer

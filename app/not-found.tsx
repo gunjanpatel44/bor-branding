@@ -1,6 +1,6 @@
 import GradientLink from '@/components/GradientLink'
 
-export default function NotFound() {
+const NotFound = () => {
   return (
     <main className="bg-black text-white min-h-screen flex flex-col items-center justify-center text-center p-4">
       <div className="max-w-4xl mx-auto">
@@ -36,3 +36,5 @@ export default function NotFound() {
     </main>
   )
 }
+
+export default NotFound

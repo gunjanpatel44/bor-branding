@@ -6,7 +6,7 @@ import { StarryBackground } from '@/components/StarryBackground'
 import { products } from '@/config/products'
 import { IProduct } from '@/utils/types'
 
-export default function HomePage() {
+const AppHome = () => {
   return (
     <main className="min-h-screen">
       <HeroCarousel />
@@ -22,3 +22,5 @@ export default function HomePage() {
     </main>
   )
 }
+
+export default AppHome

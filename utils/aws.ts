@@ -1,5 +1,5 @@
 import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3'
-import { IUploadFile, uploadFileHandlerResponse } from './types'
+import { IUploadFile, UploadFileHandlerResponse } from './types'
 
 const Bucket = process.env.AMPLIFY_BUCKET as string
 if (!Bucket) throw new Error('❌ Missing AMPLIFY_BUCKET environment variable')
@@ -12,10 +12,10 @@ const s3Client = new S3Client({
   },
 })
 
-export async function uploadFileHandler(
+export const uploadFileHandler = async (
   foldername: string,
   file: IUploadFile
-): Promise<uploadFileHandlerResponse> {
+): Promise<UploadFileHandlerResponse> => {
   try {
     const params = {
       Bucket,
@@ -37,3 +37,18 @@ export async function uploadFileHandler(
     }
   }
 }
+
+// This is a way for signing the image and if you need to block public access for the bucket, currently we have added bucket policy
+
+// import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
+// import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
+
+// const s3 = new S3Client({ region: 'ap-south-1' })
+
+// async function generateSignedUrl(fileName, type) {
+//   const command = new GetObjectCommand({
+//     Bucket: process.env.AMPLIFY_BUCKET,
+//     Key: `${type}/${fileName}`,
+//   })
+//   return await getSignedUrl(s3, command, { expiresIn: 3600 }) // 1 hour
+// }

@@ -2,7 +2,8 @@
 
 import GradientLink from '@/components/GradientLink'
 import ProductDescription from '@/components/ProductDescription'
-// import ReviewForm from '@/components/Review'
+import ReviewList from '@/components/ReviewList'
+import ReviewForm from '@/components/ReviewForm'
 import company from '@/config/company.json'
 import { IProduct } from '@/utils/types'
 import Image from 'next/image'
@@ -109,7 +110,8 @@ const ProductClient = ({ product }: { product: IProduct }) => {
           </div>
         </div>
       </div>
-      {/* <ReviewForm /> */}
+      <ReviewForm />
+      <ReviewList productSlug={product.slug} />
     </main>
   )
 }

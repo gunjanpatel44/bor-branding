@@ -21,13 +21,13 @@ export const POST = async (request: Request) => {
       media,
     })
     return NextResponse.json(
-      { status: 201, message: 'Review submitted successfully!', review: newReview },
+      { status: 201, message: 'Thanks for sharing review', review: newReview },
       { status: 201 }
     )
   } catch (error) {
     console.error('Error submitting review:', error)
     return NextResponse.json(
-      { status: 500, message: 'Internal Server Error.', error },
+      { status: 500, message: 'Internal server error.', error },
       { status: 500 }
     )
   }
@@ -42,11 +42,20 @@ export const GET = async (request: NextRequest) => {
     const limit = parseInt(searchParams.get('limit') || '10', 10)
     const skip = (page - 1) * limit
     const query = slug ? { product_slug: slug } : {}
-    const [reviews, totalReviews] = await Promise.all([
-      Review.find(query).sort({ createdAt: -1 }).skip(skip).limit(limit),
+    const [reviews, total] = await Promise.all([
+      Review.find(query)
+        .sort({ created_at: -1 })
+        .skip(skip)
+        .limit(limit)
+        .populate({
+          path: 'media',
+          select: 'file_name type',
+          options: { lean: { virtuals: true } },
+        })
+        .lean(),
       Review.countDocuments(query),
     ])
-    const totalPages = Math.ceil(totalReviews / limit)
+    const totalPages = Math.ceil(total / limit)
     return NextResponse.json(
       {
         status: 200,
@@ -55,7 +64,7 @@ export const GET = async (request: NextRequest) => {
         pagination: {
           currentPage: page,
           totalPages,
-          totalReviews,
+          total,
         },
       },
       { status: 200 }

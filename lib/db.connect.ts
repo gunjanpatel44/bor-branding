@@ -22,10 +22,14 @@ const connect = async () => {
       socketTimeoutMS: 45000, // Add socket timeout to prevent timeouts
     })
     console.log('Connected to MongoDB')
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } catch (err: any) {
-    console.log('Error: ', err)
-    throw new Error('Error: ', err)
+  } catch (err) {
+    if (err instanceof Error) {
+      console.error('❌ MongoDB connection error:', err.message)
+      throw new Error(`MongoDB connection failed: ${err.message}`)
+    } else {
+      console.error('❌ Unknown MongoDB connection error:', err)
+      throw new Error('MongoDB connection failed: Unknown error')
+    }
   }
 }
 

@@ -1,9 +1,9 @@
 import { uploadImage } from '@/services'
-import { uploadImageResponse } from '@/utils/types'
+import { UploadImageResponse } from '@/utils/types'
 import { useMutation } from '@tanstack/react-query'
 
 const useUploadImage = () => {
-  return useMutation<uploadImageResponse, Error, FormData>({
+  return useMutation<UploadImageResponse, Error, FormData>({
     mutationFn: uploadImage,
   })
 }

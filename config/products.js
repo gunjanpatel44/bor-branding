@@ -76,7 +76,7 @@ export const products = [
       },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    ribbonText: '30% OFF',
+    ribbonText: '25% OFF',
     ribbonColor: 'red',
   },
   {
@@ -129,7 +129,7 @@ export const products = [
       },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    ribbonText: '30% OFF',
+    ribbonText: '25% OFF',
     ribbonColor: 'red',
   },
   {

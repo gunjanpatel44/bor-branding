@@ -32,6 +32,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const isProd = process.env.NODE_ENV === 'production'
   return (
     <html lang="en">
       <head>
@@ -43,7 +44,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${bebas.variable} antialiased relative min-h-screen bg-brand-900 text-brand-100 overflow-x-hidden`}
       >
-        <GoogleAnalytics gaId="G-0DTR0WYN51" />
+        {isProd && <GoogleAnalytics gaId="G-0DTR0WYN51" />}
         <Providers>
           <div className="relative mx-auto z-10">
             <Header />

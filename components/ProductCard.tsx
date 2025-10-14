@@ -1,4 +1,5 @@
-import { IProduct, TProductCardTheme } from '@/utils/types'
+import { themeClasses } from '@/utils'
+import { IProduct } from '@/utils/types'
 import Ribbon from 'antd/es/badge/Ribbon'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -25,12 +26,6 @@ export const ProductCard = ({
   },
   className = '',
 }: IProductCardProps) => {
-  const themeClasses: Record<TProductCardTheme, string> = {
-    fieldsOfMemory: 'from-gray-900/40 to-black border-gray-700/30',
-    whispersOfGrowth: 'from-green-900/40 to-black border-green-700/30',
-    adikavya: 'from-red-900/40 to-black border-red-700/30',
-  }
-
   const cardContent = (
     <div
       id={String(id)}

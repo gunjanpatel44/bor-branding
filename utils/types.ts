@@ -1,8 +1,10 @@
 import { PutObjectCommandOutput } from '@aws-sdk/client-s3'
+import { GetProp, UploadProps } from 'antd'
 import { StaticImageData } from 'next/image'
 
 // Types
 export type TProductCardTheme = 'fieldsOfMemory' | 'whispersOfGrowth' | 'adikavya'
+export type FileType = Parameters<GetProp<UploadProps, 'beforeUpload'>>[0]
 
 // Enums
 export enum MediaTypes {
@@ -14,6 +16,12 @@ export type IProductDescription = {
   id: number
   title: string
   desc: string
+}
+
+export interface IPagination {
+  currentPage: number
+  totalPages: number
+  total: number
 }
 
 export interface IProduct {
@@ -42,6 +50,14 @@ export interface IReviewFormValues {
   uploadImage?: string
 }
 
+export interface IMediaResponse {
+  _id: string
+  file_name: string
+  type: string
+  url: string
+  id: string
+}
+
 export interface IReview {
   _id: string
   customer_name: string
@@ -63,7 +79,7 @@ export interface commonResponse {
 }
 
 // API Payload
-export interface ISubmitReviewPayload {
+export interface SubmitReviewPayload {
   customer_name: string
   product_slug: string
   stars: string
@@ -72,11 +88,11 @@ export interface ISubmitReviewPayload {
 }
 
 // API Responses
-export interface uploadFileHandlerResponse extends commonResponse {
+export interface UploadFileHandlerResponse extends commonResponse {
   data?: PutObjectCommandOutput
 }
 
-export interface uploadImageResponse extends commonResponse {
+export interface UploadImageResponse extends commonResponse {
   data: {
     _id: string
     id: string
@@ -93,10 +109,26 @@ export interface uploadImageResponse extends commonResponse {
   }
 }
 
-export interface submitReviewResponse extends commonResponse {
+export interface IReviewResponse {
+  _id: string
+  customer_name: string
+  product_slug: string
+  stars: number
+  description: string
+  media: IMediaResponse[]
+  created_at: string
+  updated_at: string
+  __v: number
+}
+export interface FetchReviewsResponse extends commonResponse {
+  data: IReviewResponse[]
+  pagination: IPagination
+}
+
+export interface SubmitReviewResponse extends commonResponse {
   data: IReview
 }
 
-export interface getReviewsResponse extends commonResponse {
+export interface GetReviewsResponse extends commonResponse {
   data: IReview[]
 }

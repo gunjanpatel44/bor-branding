@@ -4,13 +4,14 @@ import { productSlugs } from '@/config/products'
 import useSubmitReview from '@/hooks/useSubmitReview'
 import useUploadImage from '@/hooks/useUploadImage'
 import { invalidateQuery } from '@/services/queryClient'
+import { getBase64, handleBeforeUpload } from '@/utils'
 import cacheKeys from '@/utils/cacheKeys'
 import { IReviewFormValues, MediaTypes } from '@/utils/types'
-import { Button, Card, Form, Input, notification, Rate, Select, Upload } from 'antd'
-import type { UploadFile } from 'antd/es/upload/interface'
+import { Alert, Button, Form, GetProp, Input, Rate, Select, Upload } from 'antd'
+import type { UploadFile, UploadProps } from 'antd/es/upload/interface'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
-import { AiFillStar } from 'react-icons/ai'
+import toast from 'react-hot-toast'
 
 const { TextArea } = Input
 const { Option } = Select
@@ -18,14 +19,20 @@ const { Option } = Select
 const ReviewForm = () => {
   const [form] = Form.useForm()
   const [fileList, setFileList] = useState<UploadFile[]>([])
-
   const router = useRouter()
-  const { mutate: submitReview, isPending } = useSubmitReview()
-  const { mutateAsync: uploadImage } = useUploadImage()
+  const { mutateAsync: uploadImage, isPending: isUploading } = useUploadImage()
+  const { mutate: submitReview, isPending: isSubmitting } = useSubmitReview()
 
   const handleRemove = (file: UploadFile) => {
     const updatedFileList = fileList.filter((f) => f.uid !== file.uid)
     setFileList(updatedFileList)
+  }
+
+  const handlePreview = async (file: UploadFile) => {
+    if (!file.url && !file.preview) {
+      type FileType = Parameters<GetProp<UploadProps, 'beforeUpload'>>[0]
+      file.preview = await getBase64(file.originFileObj as FileType)
+    }
   }
 
   const onFinish = async (reviewFormValues: IReviewFormValues) => {
@@ -44,13 +51,11 @@ const ReviewForm = () => {
               description || `Product review media from ${customer_name}`
             )
             const response = await uploadImage(formData)
-            console.log(response, 'response')
             return response.data._id
           })
         )
         mediaIds = uploadResults.filter(Boolean)
       }
-      console.log(mediaIds, '✅ All media IDs collected')
       const payload = {
         customer_name,
         product_slug,
@@ -59,45 +64,52 @@ const ReviewForm = () => {
         media: mediaIds,
       }
       submitReview(payload, {
-        onSuccess: () => {
-          notification.success({ message: 'Review submitted successfully!' })
+        onSuccess: (response) => {
+          toast.success(response.message)
           invalidateQuery([cacheKeys.REVIEWS])
+          form.resetFields()
           router.push('/')
         },
         onError: (error) => {
-          notification.error({
-            type: 'error',
-            message: error?.message || 'Failed to submit review',
-          })
+          toast.error(error?.message || 'Failed to submit review')
         },
       })
     } catch {
-      notification.error({
-        type: 'error',
-        message: 'An image failed to upload.',
-      })
+      toast.error('An image failed to upload.')
     }
   }
 
   return (
-    <div className="flex justify-center items-center p-4">
-      <Card title="Write a Product Review" className="max-w-4xlw-full shadow-lg">
-        <Form form={form} layout="vertical" onFinish={onFinish} initialValues={{ stars: 0 }}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6">
+    <div className="flex flex-col gap-5 justify-center items-center py-10 px-4">
+      <span className="text-2xl font-semibold text-brand">Write a Product Review</span>
+      <div
+        className={
+          'flex justify-center items-center p-5 md:p-10 border border-brand-700 rounded-2xl bg-gray-900'
+        }
+      >
+        <Form
+          form={form}
+          layout="vertical"
+          onFinish={onFinish}
+          initialValues={{ stars: 0 }}
+          className="space-y-4"
+        >
+          {/* Name and Product */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Form.Item
               name="customer_name"
-              label="Full Name"
+              label={<span className="font-medium text-brand">Full Name</span>}
               rules={[{ required: true, message: 'Please enter your name!' }]}
             >
               <Input placeholder="e.g., Jane Doe" />
             </Form.Item>
             <Form.Item
               name="product_slug"
-              label="Product"
+              label={<span className="font-medium text-brand">Product</span>}
               rules={[{ required: true, message: 'Please select a product!' }]}
             >
-              <Select placeholder="Select the product you are reviewing">
-                {productSlugs.map((slug) => (
+              <Select placeholder="Select the product you are reviewing" className="rounded-xl">
+                {productSlugs.map((slug: string) => (
                   <Option key={slug} value={slug}>
                     {slug.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())}
                   </Option>
@@ -108,59 +120,69 @@ const ReviewForm = () => {
           {/* Star Rating */}
           <Form.Item
             name="stars"
-            label="Rating"
+            label={<span className="font-medium text-brand">Rating</span>}
             rules={[
               { required: true, message: 'Please provide a rating!' },
               { type: 'number', min: 1, message: 'Rating cannot be zero!' },
             ]}
           >
-            <Rate character={<AiFillStar />} style={{ fontSize: 24 }} />
+            <Rate allowHalf />
           </Form.Item>
-          {/* Review Description */}
-          <Form.Item name="description" label="Review (Optional)">
+          {/* Review Text */}
+          <Form.Item
+            name="description"
+            label={<span className="font-medium text-brand">Review (Optional)</span>}
+          >
             <TextArea
               rows={4}
-              placeholder="What did you like or dislike? How did you use the product?"
+              placeholder="Share your thoughts about the product..."
+              className="rounded-xl border-brand-300 focus:border-brand-700"
             />
           </Form.Item>
+          {/* Image Upload */}
+          <Alert
+            message="Only image files allowed (max size 3 MB, max 3 files)"
+            type="warning"
+            style={{ marginBottom: '15px' }}
+          />
           <Form.Item
             name="media"
-            label="Product images"
+            label={<span className="font-medium text-brand">Product Images</span>}
             valuePropName="fileList"
-            getValueFromEvent={({ fileList }) => fileList}
+            getValueFromEvent={(e) => e && e.fileList}
           >
             <Upload
               multiple
-              beforeUpload={() => false}
               listType="picture-card"
+              accept=".jpg,.jpeg,.png,.webp"
               onChange={({ fileList: newFileList }) => {
-                if (newFileList.length > 3) {
-                  newFileList = newFileList.slice(0, 3)
-                }
+                if (newFileList.length > 3) newFileList = newFileList.slice(0, 3)
                 setFileList(newFileList)
                 form.setFieldsValue({ media: newFileList })
               }}
+              maxCount={3}
               onRemove={handleRemove}
-              onPreview={() => false}
+              beforeUpload={(file) => handleBeforeUpload(file, setFileList, fileList)}
+              onPreview={handlePreview}
               fileList={fileList}
             >
-              {fileList.length <= 6 && '+ Upload'}
+              <span className="font-medium text-brand">{fileList.length <= 3 && '+ Upload'}</span>
             </Upload>
           </Form.Item>
-          <Form.Item>
+          {/* Submit Button */}
+          <Form.Item name="submit">
             <Button
               type="primary"
               htmlType="submit"
-              loading={isPending}
-              disabled={isPending}
-              className="w-full"
-              size="large"
+              style={{ boxShadow: 'none' }}
+              loading={isUploading || isSubmitting}
+              disabled={isUploading || isSubmitting}
             >
               Submit Review
             </Button>
           </Form.Item>
         </Form>
-      </Card>
+      </div>
     </div>
   )
 }
