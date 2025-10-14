@@ -65,9 +65,6 @@ importers:
       react-icons:
         specifier: ^5.5.0
         version: 5.5.0(react@19.1.0)
-      sharp:
-        specifier: ^0.34.4
-        version: 0.34.4
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3
@@ -111,6 +108,10 @@ importers:
       typescript:
         specifier: ^5
         version: 5.9.2
+    optionalDependencies:
+      sharp:
+        specifier: ^0.34.4
+        version: 0.34.4
 
 packages:
 
@@ -3586,7 +3587,8 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@img/colour@1.0.0': {}
+  '@img/colour@1.0.0':
+    optional: true
 
   '@img/sharp-darwin-arm64@0.34.4':
     optionalDependencies:
@@ -5501,7 +5503,7 @@ snapshots:
 
   lightningcss@1.30.1:
     dependencies:
-      detect-libc: 2.0.4
+      detect-libc: 2.1.2
     optionalDependencies:
       lightningcss-darwin-arm64: 1.30.1
       lightningcss-darwin-x64: 1.30.1
@@ -6269,6 +6271,7 @@ snapshots:
       '@img/sharp-win32-arm64': 0.34.4
       '@img/sharp-win32-ia32': 0.34.4
       '@img/sharp-win32-x64': 0.34.4
+    optional: true
 
   shebang-command@2.0.0:
     dependencies:
