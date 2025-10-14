@@ -32,7 +32,7 @@ export const products = [
     name: 'Fields of Memory',
     slug: 'fields-of-memory-tee',
     description: 'Step into nostalgia with soulful streetwear.',
-    mrp: 1499,
+    mrp: 1999,
     sellingPrice: 1499,
     theme: 'fieldsOfMemory',
     category: 'T-Shirt',
