@@ -1,3 +1,5 @@
+export const runtime = 'nodejs'
+
 import connect from '@/lib/db.connect'
 import Media from '@/lib/models/media.model'
 import { uploadFileHandler } from '@/utils/aws'
