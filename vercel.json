@@ -1,0 +1,3 @@
+{
+  "buildCommand": "npm rebuild sharp --force && next build"
+}
