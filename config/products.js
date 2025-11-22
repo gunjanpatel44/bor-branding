@@ -174,7 +174,7 @@ export const products = [
       },
     ],
     sizes: ['S', 'M', 'L', 'XL'],
-    // ribbonText: 'Top rated',
+    ribbonText: 'Just Launched',
     // ribbonColor: 'purple',
   },
 ]

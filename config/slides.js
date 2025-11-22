@@ -4,8 +4,8 @@ import FieldOfMemory10 from '@/public/album/Fields of Memory/fields-of-memory-10
 import WhispersOfGrowth6 from '@/public/album/Whispers of Growth/whispers-of-growth-6.webp'
 import WhispersOfGrowth8 from '@/public/album/Whispers of Growth/whispers-of-growth-8.webp'
 import WhispersOfGrowth10 from '@/public/album/Whispers of Growth/whispers-of-growth-10.webp'
-// import Adikavya1 from '@/public/album/Adikavya/adikavya-1.webp'
-// import Adikavya2 from '@/public/album/Adikavya/adikavya-2.webp'
+import Adikavya3 from '@/public/album/Adikavya/adikavya-3.webp'
+import Adikavya4 from '@/public/album/Adikavya/adikavya-4.webp'
 
 export const slides = [
   {
@@ -55,5 +55,21 @@ export const slides = [
     subtitle: 'Rising from decay — proof that beauty survives every collapse.',
     ctaText: 'Shop Minimal',
     ctaLink: '/collection/whispers-of-growth-tee',
+  },
+  {
+    imageUrl: Adikavya3,
+    alt: 'Ramayana-inspired illustration featuring Ravan, Sita Mata, Jatayu, and Lord Ram',
+    title: 'The First Epic',
+    subtitle: 'Where devotion meets destiny — the Ramayana unfolds in every stitch.',
+    ctaText: 'Explore Adikavya',
+    ctaLink: '/collection/adikavya-tee',
+  },
+  {
+    imageUrl: Adikavya4,
+    alt: 'Mythological artwork symbolizing dharma, courage and divine strength',
+    title: 'Saga of Dharma',
+    subtitle: 'A tribute to courage, righteousness, and the eternal victory of truth.',
+    ctaText: 'Discover The Story',
+    ctaLink: '/collection/adikavya-tee',
   },
 ]
