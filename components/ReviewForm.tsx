@@ -1,17 +1,19 @@
 'use client'
 
 import { productSlugs } from '@/config/products'
+import useImagePreview from '@/hooks/useImagePreview'
 import useSubmitReview from '@/hooks/useSubmitReview'
 import useUploadImage from '@/hooks/useUploadImage'
 import { invalidateQuery } from '@/services/queryClient'
-import { getBase64, handleBeforeUpload } from '@/utils'
+import { handleBeforeUpload } from '@/utils'
 import cacheKeys from '@/utils/cacheKeys'
 import { IReviewFormValues, MediaTypes } from '@/utils/types'
-import { Alert, Button, Form, GetProp, Input, Rate, Select, Upload } from 'antd'
-import type { UploadFile, UploadProps } from 'antd/es/upload/interface'
+import { Alert, Button, Form, Input, Rate, Select, Upload } from 'antd'
+import type { UploadFile } from 'antd/es/upload/interface'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import toast from 'react-hot-toast'
+import ImagePreview from './ImagePreview'
 
 const { TextArea } = Input
 const { Option } = Select
@@ -22,17 +24,12 @@ const ReviewForm = () => {
   const router = useRouter()
   const { mutateAsync: uploadImage, isPending: isUploading } = useUploadImage()
   const { mutate: submitReview, isPending: isSubmitting } = useSubmitReview()
+  const { previewOpen, previewImage, handlePreview, handleClose, setPreviewOpen } =
+    useImagePreview()
 
   const handleRemove = (file: UploadFile) => {
     const updatedFileList = fileList.filter((f) => f.uid !== file.uid)
     setFileList(updatedFileList)
-  }
-
-  const handlePreview = async (file: UploadFile) => {
-    if (!file.url && !file.preview) {
-      type FileType = Parameters<GetProp<UploadProps, 'beforeUpload'>>[0]
-      file.preview = await getBase64(file.originFileObj as FileType)
-    }
   }
 
   const onFinish = async (reviewFormValues: IReviewFormValues) => {
@@ -158,7 +155,6 @@ const ReviewForm = () => {
               onChange={({ fileList: newFileList }) => {
                 if (newFileList.length > 3) newFileList = newFileList.slice(0, 3)
                 setFileList(newFileList)
-                form.setFieldsValue({ media: newFileList })
               }}
               maxCount={3}
               onRemove={handleRemove}
@@ -183,6 +179,12 @@ const ReviewForm = () => {
           </Form.Item>
         </Form>
       </div>
+      <ImagePreview
+        previewOpen={previewOpen}
+        previewImage={previewImage}
+        handleClose={handleClose}
+        setPreviewOpen={setPreviewOpen}
+      />
     </div>
   )
 }

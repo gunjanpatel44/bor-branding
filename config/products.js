@@ -18,13 +18,13 @@ import FieldOfMemory7 from '@/public/album/Fields of Memory/fields-of-memory-7.w
 import FieldOfMemory8 from '@/public/album/Fields of Memory/fields-of-memory-8.webp'
 // import FieldOfMemory9 from '@/public/album/Fields of Memory/fields-of-memory-9.webp'
 import FieldOfMemory10 from '@/public/album/Fields of Memory/fields-of-memory-10.webp'
-// import Adikavya1 from '@/public/album/Adikavya/adikavya-1.webp'
-// import Adikavya2 from '@/public/album/Adikavya/adikavya-2.webp'
-// import Adikavya3 from '@/public/album/Adikavya/adikavya-3.webp'
-// import Adikavya4 from '@/public/album/Adikavya/adikavya-4.webp'
-// import Adikavya5 from '@/public/album/Adikavya/adikavya-5.webp'
-import ComingSoon from '@/public/album/Coming Soon/ComingSoon.webp'
+import Adikavya1 from '@/public/album/Adikavya/adikavya-1.webp'
+import Adikavya2 from '@/public/album/Adikavya/adikavya-2.webp'
+import Adikavya3 from '@/public/album/Adikavya/adikavya-3.webp'
+import Adikavya4 from '@/public/album/Adikavya/adikavya-4.webp'
+import Adikavya5 from '@/public/album/Adikavya/adikavya-5.webp'
 import TShirtSizeChart from '@/public/size-chart/box-fit-tshirt-size-chart.webp'
+// import ComingSoon from '@/public/album/Coming Soon/ComingSoon.webp'
 
 export const products = [
   {
@@ -137,14 +137,13 @@ export const products = [
     name: 'Adikavya',
     slug: 'adikavya-tee',
     description: 'Ramayana retold — the eternal triumph of dharma.',
-    mrp: '2***',
-    sellingPrice: '1***',
+    mrp: 1999,
+    sellingPrice: 1499,
     theme: 'adikavya',
     category: 'T-Shirt',
-    imageUrl: ComingSoon,
-    // gallery: [Adikavya2, Adikavya3, Adikavya4, Adikavya5, TShirtSizeChart,],
-    comingSoon: true,
-    gallery: [],
+    imageUrl: Adikavya1,
+    gallery: [Adikavya2, Adikavya3, Adikavya4, Adikavya5, TShirtSizeChart],
+    comingSoon: false,
     productAccordian: [
       {
         id: 1,

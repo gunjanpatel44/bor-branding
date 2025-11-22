@@ -16,7 +16,7 @@ const ProductDescription = ({ productAccordian }: { productAccordian: IProductDe
           <h2>
             <button
               type="button"
-              className="flex items-center justify-between w-full py-5 font-semibold text-left text-white"
+              className="flex items-center justify-between w-full py-5 font-semibold text-left text-white cursor-pointer"
               onClick={() => togglePanel(section.id)}
               aria-expanded={openPanel === section.id}
             >
